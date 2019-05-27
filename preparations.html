@@ -1,0 +1,1491 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Cycling Collisions in London</title>
+  <meta name="description" content="Cycling Collisions in London" />
+  <meta name="generator" content="bookdown 0.10 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Cycling Collisions in London" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Cycling Collisions in London" />
+  
+  
+  
+
+<meta name="author" content="Rebecca Henderson" />
+
+
+<meta name="date" content="2019-05-01" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+<link rel="next" href="general-information.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+<script src="libs/htmlwidgets-1.3/htmlwidgets.js"></script>
+<link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="libs/datatables-binding-0.5/datatables.js"></script>
+<link href="libs/dt-core-1.10.16/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="libs/dt-core-1.10.16/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="libs/dt-core-1.10.16/js/jquery.dataTables.min.js"></script>
+<link href="libs/crosstalk-1.0.0/css/crosstalk.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.0.0/js/crosstalk.min.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<script src="libs/plotly-binding-4.9.0/plotly.js"></script>
+<script src="libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="libs/plotly-htmlwidgets-css-1.46.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotly-main-1.46.1/plotly-latest.min.js"></script>
+<link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
+<script src="libs/leaflet-1.3.1/leaflet.js"></script>
+<link href="libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+<script src="libs/Proj4Leaflet-1.0.1/proj4-compressed.js"></script>
+<script src="libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+<link href="libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
+<script src="libs/leaflet-binding-2.0.2/leaflet.js"></script>
+<link href="libs/leaflet-markercluster-1.0.5/MarkerCluster.css" rel="stylesheet" />
+<link href="libs/leaflet-markercluster-1.0.5/MarkerCluster.Default.css" rel="stylesheet" />
+<script src="libs/leaflet-markercluster-1.0.5/leaflet.markercluster.js"></script>
+<script src="libs/leaflet-markercluster-1.0.5/leaflet.markercluster.freezable.js"></script>
+<script src="libs/leaflet-markercluster-1.0.5/leaflet.markercluster.layersupport.js"></script>
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="preparations.html"><a href="preparations.html"><i class="fa fa-check"></i><b>1</b> Preparations</a><ul>
+<li class="chapter" data-level="1.1" data-path="preparations.html"><a href="preparations.html#load-libraries"><i class="fa fa-check"></i><b>1.1</b> Load libraries</a></li>
+<li class="chapter" data-level="1.2" data-path="preparations.html"><a href="preparations.html#read-data"><i class="fa fa-check"></i><b>1.2</b> Read data</a></li>
+<li class="chapter" data-level="1.3" data-path="preparations.html"><a href="preparations.html#data-structure"><i class="fa fa-check"></i><b>1.3</b> Data structure</a></li>
+<li class="chapter" data-level="1.4" data-path="preparations.html"><a href="preparations.html#view"><i class="fa fa-check"></i><b>1.4</b> View</a></li>
+<li class="chapter" data-level="1.5" data-path="preparations.html"><a href="preparations.html#missing-rate-and-unique-values"><i class="fa fa-check"></i><b>1.5</b> Missing rate and unique values</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="general-information.html"><a href="general-information.html"><i class="fa fa-check"></i><b>2</b> General Information</a><ul>
+<li class="chapter" data-level="2.1" data-path="general-information.html"><a href="general-information.html#walking"><i class="fa fa-check"></i><b>2.1</b> Walking</a></li>
+<li class="chapter" data-level="2.2" data-path="general-information.html"><a href="general-information.html#charge"><i class="fa fa-check"></i><b>2.2</b> Charge</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="general-information.html"><a href="general-information.html#number-of-charges-for-adults"><i class="fa fa-check"></i><b>2.2.1</b> Number of charges for adults</a></li>
+<li class="chapter" data-level="2.2.2" data-path="general-information.html"><a href="general-information.html#number-of-adults-involved-in-cyclist-charges"><i class="fa fa-check"></i><b>2.2.2</b> Number of adults involved in cyclist charges</a></li>
+<li class="chapter" data-level="2.2.3" data-path="general-information.html"><a href="general-information.html#charge-of-cyclists-vs-rain"><i class="fa fa-check"></i><b>2.2.3</b> Charge of cyclists vs rain</a></li>
+<li class="chapter" data-level="2.2.4" data-path="general-information.html"><a href="general-information.html#charge-of-drivers-vs-rain"><i class="fa fa-check"></i><b>2.2.4</b> Charge of drivers vs rain</a></li>
+<li class="chapter" data-level="2.2.5" data-path="general-information.html"><a href="general-information.html#charge-of-drivers-vs-walking"><i class="fa fa-check"></i><b>2.2.5</b> Charge of drivers vs walking</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="general-information.html"><a href="general-information.html#fault"><i class="fa fa-check"></i><b>2.3</b> fault</a></li>
+<li class="chapter" data-level="2.4" data-path="general-information.html"><a href="general-information.html#enviorment"><i class="fa fa-check"></i><b>2.4</b> Enviorment</a></li>
+<li class="chapter" data-level="2.5" data-path="general-information.html"><a href="general-information.html#manoeuver"><i class="fa fa-check"></i><b>2.5</b> Manoeuver</a></li>
+<li class="chapter" data-level="2.6" data-path="general-information.html"><a href="general-information.html#injurythree"><i class="fa fa-check"></i><b>2.6</b> injuryThree</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="time-effect.html"><a href="time-effect.html"><i class="fa fa-check"></i><b>3</b> Time Effect</a><ul>
+<li class="chapter" data-level="3.1" data-path="time-effect.html"><a href="time-effect.html#time-factor"><i class="fa fa-check"></i><b>3.1</b> Time factor</a></li>
+<li class="chapter" data-level="3.2" data-path="time-effect.html"><a href="time-effect.html#monthly-aggregation-for-each-year"><i class="fa fa-check"></i><b>3.2</b> Monthly aggregation for each year</a></li>
+<li class="chapter" data-level="3.3" data-path="time-effect.html"><a href="time-effect.html#yearly-aggregation"><i class="fa fa-check"></i><b>3.3</b> Yearly aggregation</a></li>
+<li class="chapter" data-level="3.4" data-path="time-effect.html"><a href="time-effect.html#monthly-aggregation"><i class="fa fa-check"></i><b>3.4</b> Monthly aggregation</a></li>
+<li class="chapter" data-level="3.5" data-path="time-effect.html"><a href="time-effect.html#rush-hour"><i class="fa fa-check"></i><b>3.5</b> Rush hour</a></li>
+<li class="chapter" data-level="3.6" data-path="time-effect.html"><a href="time-effect.html#day-aggregation"><i class="fa fa-check"></i><b>3.6</b> Day aggregation</a></li>
+<li class="chapter" data-level="3.7" data-path="time-effect.html"><a href="time-effect.html#hour-aggregation"><i class="fa fa-check"></i><b>3.7</b> Hour aggregation</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="location-effect.html"><a href="location-effect.html"><i class="fa fa-check"></i><b>4</b> Location Effect</a><ul>
+<li class="chapter" data-level="4.1" data-path="location-effect.html"><a href="location-effect.html#get-map"><i class="fa fa-check"></i><b>4.1</b> GET MAP</a></li>
+<li class="chapter" data-level="4.2" data-path="location-effect.html"><a href="location-effect.html#scatterplot"><i class="fa fa-check"></i><b>4.2</b> Scatterplot</a></li>
+<li class="chapter" data-level="4.3" data-path="location-effect.html"><a href="location-effect.html#heatmap"><i class="fa fa-check"></i><b>4.3</b> Heatmap</a></li>
+<li class="chapter" data-level="4.4" data-path="location-effect.html"><a href="location-effect.html#count-by-location"><i class="fa fa-check"></i><b>4.4</b> Count by location</a></li>
+<li class="chapter" data-level="4.5" data-path="location-effect.html"><a href="location-effect.html#count-by-neigbourhood"><i class="fa fa-check"></i><b>4.5</b> Count by Neigbourhood</a></li>
+<li class="chapter" data-level="4.6" data-path="location-effect.html"><a href="location-effect.html#interactive-map-with-injury-label"><i class="fa fa-check"></i><b>4.6</b> Interactive map with injury label</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="model-for-the-number-of-collision.html"><a href="model-for-the-number-of-collision.html"><i class="fa fa-check"></i><b>5</b> Model for the Number of Collision</a><ul>
+<li class="chapter" data-level="5.1" data-path="model-for-the-number-of-collision.html"><a href="model-for-the-number-of-collision.html#grouped-by-location-and-year"><i class="fa fa-check"></i><b>5.1</b> Grouped by location and year</a></li>
+<li class="chapter" data-level="5.2" data-path="model-for-the-number-of-collision.html"><a href="model-for-the-number-of-collision.html#poisson-model"><i class="fa fa-check"></i><b>5.2</b> Poisson model</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="model-for-injury-level-of-collision.html"><a href="model-for-injury-level-of-collision.html"><i class="fa fa-check"></i><b>6</b> Model for Injury Level of Collision</a><ul>
+<li class="chapter" data-level="6.1" data-path="model-for-injury-level-of-collision.html"><a href="model-for-injury-level-of-collision.html#baseline-for-categorical-variables"><i class="fa fa-check"></i><b>6.1</b> Baseline for categorical variables</a></li>
+<li class="chapter" data-level="6.2" data-path="model-for-injury-level-of-collision.html"><a href="model-for-injury-level-of-collision.html#multinominal-model"><i class="fa fa-check"></i><b>6.2</b> Multinominal model</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Cycling Collisions in London</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">Cycling Collisions in London</h1>
+<p class="author"><em>Rebecca Henderson</em></p>
+<p class="date"><em>May 1, 2019</em></p>
+</div>
+<div id="preparations" class="section level1 tabset tabset-fade">
+<h1><span class="header-section-number">1</span> Preparations</h1>
+<div id="load-libraries" class="section level2">
+<h2><span class="header-section-number">1.1</span> Load libraries</h2>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="cf">if</span> (<span class="op">!</span><span class="kw">require</span>(<span class="st">&quot;pacman&quot;</span>)) <span class="kw">install.packages</span>(<span class="st">&quot;pacman&quot;</span>)
+pacman<span class="op">::</span><span class="kw">p_load</span>(knitr, <span class="co">#used to create markdown table</span>
+               kableExtra,
+               DescTools,
+               multcomp, 
+               nnet,
+               tidyverse,  <span class="co">#data manipulation</span>
+               ggmap,
+               viridis,
+               leaflet, <span class="co">#interactive maps</span>
+               plotly, <span class="co">#interactive plot</span>
+               readxl,  <span class="co">#read excel files</span>
+               DT,  <span class="co">#present a formated table of data</span>
+               lubridate) <span class="co">#deal with date</span></code></pre>
+</div>
+<div id="read-data" class="section level2">
+<h2><span class="header-section-number">1.2</span> Read data</h2>
+<pre class="sourceCode r"><code class="sourceCode r">collision &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;processedData/collisionCollapsed_April30.csv&quot;</span>)</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   date = col_datetime(format = &quot;&quot;),
+##   lat = col_double(),
+##   lon = col_double(),
+##   dSpeed = col_integer(),
+##   pSpeed = col_integer(),
+##   cSpeed = col_integer(),
+##   is_kid = col_logical(),
+##   is_speeding = col_logical(),
+##   is_intersection = col_logical(),
+##   is_midblock = col_logical(),
+##   isdCharge = col_logical(),
+##   iscCharge = col_logical(),
+##   is_cMultiple = col_logical(),
+##   is_dMultiple = col_logical(),
+##   sc_ccharge = col_logical(),
+##   year = col_integer(),
+##   month = col_integer(),
+##   yearmonthday = col_date(format = &quot;&quot;),
+##   yearmonth = col_date(format = &quot;&quot;),
+##   hour = col_integer()
+##   # ... with 7 more columns
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+</div>
+<div id="data-structure" class="section level2">
+<h2><span class="header-section-number">1.3</span> Data structure</h2>
+<pre><code>## Observations: 1,656
+## Variables: 74
+## $ file               &lt;chr&gt; &quot;2006-1&quot;, &quot;2006-2&quot;, &quot;2006-3&quot;, &quot;2006-4&quot;, &quot;20...
+## $ date               &lt;dttm&gt; 2006-01-12 16:15:00, 2006-02-18 13:55:00, ...
+## $ location           &lt;chr&gt; &quot;COMMISSIONERS RD W - WONDERLAND RD S&quot;, &quot;HI...
+## $ description        &lt;chr&gt; &quot;Cyclist disobeyed traffic signal and was s...
+## $ walkType           &lt;chr&gt; &quot;crosswalk&quot;, &quot;sidewalk&quot;, &quot;crosswalk&quot;, &quot;onRo...
+## $ RHcode             &lt;chr&gt; &quot;ITVCC&quot;, &quot;RTVCC&quot;, &quot;RTCVC&quot;, &quot;RTCOCVV&quot;, &quot;LTCV...
+## $ fledScene          &lt;chr&gt; &quot;UNKNOWN&quot;, &quot;UNKNOWN&quot;, &quot;UNKNOWN&quot;, &quot;D&quot;, &quot;UNKN...
+## $ injury             &lt;chr&gt; &quot;00 none&quot;, &quot;00 none&quot;, &quot;00 none&quot;, &quot;02 minor&quot;...
+## $ environment        &lt;chr&gt; &quot;clear&quot;, &quot;other&quot;, &quot;clear&quot;, &quot;clear&quot;, &quot;clear&quot;...
+## $ dAge               &lt;chr&gt; &quot;[40,60)&quot;, &quot;[40,60)&quot;, &quot;[25,40)&quot;, &quot;[25,40)&quot;,...
+## $ dSex               &lt;chr&gt; &quot;f&quot;, &quot;f&quot;, &quot;m&quot;, &quot;f&quot;, &quot;m&quot;, &quot;m&quot;, &quot;f&quot;, &quot;f&quot;, &quot;f&quot;...
+## $ EMS                &lt;chr&gt; &quot;EMS&quot;, NA, NA, &quot;SELF&quot;, NA, NA, NA, NA, NA, ...
+## $ involvedHospital   &lt;chr&gt; &quot;LHSC&quot;, NA, NA, &quot;LHSC&quot;, NA, NA, NA, NA, NA,...
+## $ dCondition         &lt;chr&gt; &quot;normal&quot;, &quot;normal&quot;, &quot;normal&quot;, &quot;normal&quot;, &quot;no...
+## $ cCondition         &lt;chr&gt; &quot;non-normal&quot;, &quot;normal&quot;, &quot;normal&quot;, &quot;normal&quot;,...
+## $ lat                &lt;dbl&gt; 42.95418, 43.01270, 42.94356, 42.98340, 42....
+## $ light              &lt;chr&gt; &quot;daylight&quot;, &quot;daylight&quot;, &quot;dark&quot;, &quot;daylight&quot;,...
+## $ lon                &lt;dbl&gt; -81.29063, -81.21158, -81.22579, -81.26282,...
+## $ dCharge            &lt;chr&gt; NA, &quot;139(1)&quot;, NA, NA, &quot;141(5)&quot;, &quot;142(1)&quot;, N...
+## $ cCharge            &lt;chr&gt; &quot;144(29)&quot;, &quot;2.12&quot;, &quot;144(29)&quot;, NA, &quot;62(17)&quot;,...
+## $ dSpeed             &lt;int&gt; 10, 2, 15, 0, 20, 15, 1, 1, 1, 1, 15, 35, 5...
+## $ pSpeed             &lt;int&gt; 50, 60, 60, 50, 50, 50, 50, 50, 50, 50, 50,...
+## $ cEquip             &lt;chr&gt; &quot;unknown&quot;, &quot;unknown&quot;, &quot;not&quot;, &quot;unknown&quot;, &quot;he...
+## $ locationType       &lt;chr&gt; &quot;intersection&quot;, &quot;non-intersection&quot;, &quot;inters...
+## $ dAct               &lt;chr&gt; &quot;properly&quot;, &quot;improperly&quot;, &quot;properly&quot;, NA, &quot;...
+## $ traControl         &lt;chr&gt; &quot;signal&quot;, &quot;stop-yied&quot;, &quot;signal&quot;, NA, &quot;stop-...
+## $ traControlCond     &lt;chr&gt; &quot;functioning&quot;, &quot;functioning&quot;, &quot;functioning&quot;...
+## $ dManoeuver         &lt;chr&gt; &quot;going ahead&quot;, &quot;going ahead&quot;, &quot;turning righ...
+## $ carType            &lt;chr&gt; &quot;automobile&quot;, &quot;automobile&quot;, &quot;automobile&quot;, N...
+## $ dDirection         &lt;chr&gt; &quot;west&quot;, &quot;east&quot;, &quot;north&quot;, NA, &quot;west&quot;, &quot;south...
+## $ dImpact            &lt;chr&gt; &quot;right front&quot;, &quot;right front corner&quot;, &quot;right...
+## $ dImpactType        &lt;chr&gt; &quot;angle&quot;, &quot;single motor vehicle(other)&quot;, &quot;an...
+## $ impactLocationType &lt;chr&gt; &quot;within intersection&quot;, &quot;not on roadway-righ...
+## $ cDirection         &lt;chr&gt; &quot;north&quot;, &quot;north&quot;, &quot;west&quot;, NA, &quot;north&quot;, &quot;eas...
+## $ cImpact            &lt;chr&gt; &quot;front centre&quot;, &quot;left center&quot;, &quot;front centr...
+## $ cImpactType        &lt;chr&gt; &quot;angle&quot;, &quot;single motor vehicle(other)&quot;, &quot;an...
+## $ cAct               &lt;chr&gt; &quot;improperly&quot;, &quot;improperly&quot;, &quot;improperly&quot;, N...
+## $ cManoeuver         &lt;chr&gt; &quot;going ahead&quot;, &quot;going ahead&quot;, &quot;going ahead&quot;...
+## $ cSpeed             &lt;int&gt; NA, 20, 15, NA, 1, 4, NA, NA, NA, NA, 30, 5...
+## $ cAge               &lt;chr&gt; &quot;[40,60)&quot;, &quot;[17,25)&quot;, &quot;[25,40)&quot;, NA, &quot;[25,4...
+## $ cSex               &lt;chr&gt; NA, NA, NA, NA, &quot;M&quot;, &quot;F&quot;, NA, &quot;F&quot;, NA, &quot;F&quot;,...
+## $ is_kid             &lt;lgl&gt; FALSE, FALSE, FALSE, NA, FALSE, FALSE, TRUE...
+## $ rain               &lt;chr&gt; &quot;clear&quot;, &quot;other&quot;, &quot;clear&quot;, &quot;clear&quot;, &quot;clear&quot;...
+## $ walkType2          &lt;chr&gt; &quot;sidewalkCycling&quot;, &quot;sidewalkCycling&quot;, &quot;side...
+## $ RHgroup            &lt;chr&gt; &quot;IT&quot;, &quot;RT&quot;, &quot;RT&quot;, &quot;RTCO&quot;, &quot;LT&quot;, &quot;RTCO&quot;, &quot;RT...
+## $ fault              &lt;chr&gt; &quot;Cfault&quot;, &quot;Cfault&quot;, &quot;Cfault&quot;, &quot;Vfault&quot;, &quot;Vf...
+## $ is_speeding        &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F...
+## $ Cinjury            &lt;chr&gt; &quot;No injury&quot;, &quot;No injury&quot;, &quot;No injury&quot;, &quot;inj...
+## $ is_intersection    &lt;lgl&gt; TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, T...
+## $ is_midblock        &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F...
+## $ isdCharge          &lt;lgl&gt; FALSE, TRUE, FALSE, FALSE, TRUE, TRUE, FALS...
+## $ iscCharge          &lt;lgl&gt; TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, TRUE, ...
+## $ is_cMultiple       &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F...
+## $ is_dMultiple       &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F...
+## $ sc_ccharge         &lt;lgl&gt; FALSE, TRUE, FALSE, FALSE, FALSE, TRUE, FAL...
+## $ hospital           &lt;chr&gt; &quot;hospital&quot;, &quot;missing&quot;, &quot;missing&quot;, &quot;hospital...
+## $ postal             &lt;chr&gt; &quot;N6K 2Y8&quot;, &quot;N5Y 1A5&quot;, NA, &quot;N6H 2A2&quot;, &quot;N6G 3...
+## $ neighborhood       &lt;chr&gt; &quot;Southcrest&quot;, &quot;Huron Heights&quot;, NA, &quot;West Lo...
+## $ year               &lt;int&gt; 2006, 2006, 2006, 2006, 2006, 2006, 2006, 2...
+## $ month              &lt;int&gt; 1, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4...
+## $ yearmonthday       &lt;date&gt; 2006-01-12, 2006-02-18, 2006-02-24, 2006-0...
+## $ yearmonth          &lt;date&gt; 2006-01-01, 2006-02-01, 2006-02-01, 2006-0...
+## $ wday               &lt;chr&gt; &quot;Thursday&quot;, &quot;Saturday&quot;, &quot;Friday&quot;, &quot;Monday&quot;,...
+## $ hour               &lt;int&gt; 16, 13, 20, 10, 19, 16, 17, 17, 17, 17, 17,...
+## $ rushhour           &lt;lgl&gt; TRUE, FALSE, FALSE, FALSE, FALSE, TRUE, TRU...
+## $ weekend            &lt;lgl&gt; FALSE, TRUE, FALSE, FALSE, FALSE, FALSE, FA...
+## $ onRoad             &lt;lgl&gt; FALSE, FALSE, FALSE, TRUE, TRUE, FALSE, FAL...
+## $ reDirection1       &lt;int&gt; 3, 2, 1, NA, 3, 3, 1, 2, 1, 2, 2, 2, 3, 2, ...
+## $ reDirection2       &lt;chr&gt; &quot;opposite&quot;, &quot;orthogonal&quot;, &quot;orthogonal&quot;, NA,...
+## $ R1new              &lt;chr&gt; &quot;COMMISSIONERS RD W&quot;, &quot;HIGHBURY AVE N&quot;, &quot;SO...
+## $ R2new              &lt;chr&gt; &quot;WONDERLAND RD S&quot;, &quot;LANDOR ST&quot;, &quot;WELLINGTON...
+## $ numR1new           &lt;int&gt; 4, 2, 4, NA, 2, 4, 3, 3, 3, 3, 2, 4, 2, 2, ...
+## $ numR2new           &lt;int&gt; 4, 4, 6, NA, 4, 4, 4, 4, 4, 4, 2, 4, 4, 5, ...
+## $ locationIndex      &lt;int&gt; 1, 2, 3, 4, 5, 6, 7, 7, 7, 7, 8, 9, 10, 11,...</code></pre>
+</div>
+<div id="view" class="section level2">
+<h2><span class="header-section-number">1.4</span> View</h2>
+<div id="htmlwidget-4663e107ab8390fa83ad" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-4663e107ab8390fa83ad">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10"],["2006-1","2006-2","2006-3","2006-4","2006-5","2006-6","2006-7","2006-7","2006-8","2006-8"],["2006-01-12T16:15:00Z","2006-02-18T13:55:00Z","2006-02-24T20:20:00Z","2006-03-13T10:00:00Z","2006-03-27T19:30:00Z","2006-03-28T16:33:00Z","2006-03-30T17:00:00Z","2006-03-30T17:00:00Z","2006-03-30T17:00:00Z","2006-03-30T17:00:00Z"],["COMMISSIONERS RD W - WONDERLAND RD S","HIGHBURY AVE N - LANDOR ST","SOUTHDALE RD E - WELLINGTON RD","WHARNCLIFFE RD N - KENSINGTON PL","SARNIA RD - STIRRUP CRT","HAMILTON RD - ADELAIDE ST N","SHERWOOD FOREST SQ - WONDERLAND RD N","SHERWOOD FOREST SQ - WONDERLAND RD N","SHERWOOD FOREST SQ - WONDERLAND RD N","SHERWOOD FOREST SQ - WONDERLAND RD N"],["Cyclist disobeyed traffic signal and was struck by car crossing the intersection. Cyclist drinking and charged with riding in the crosswalk.","Cyclist riding through an intersection on the sidewalk was struck by a car making a right hand turn. Driver charged with failing to yield and cyclist with riding on the sidewalk.","Car making a right hand turn was struck by a cyclist riding in the crosswalk. Cyclist charged with riding in the crosswalk.","Car driving through intersection was struck on the driver's side by a cyclist travelling on the wrong side of the road. Driver left the scene.","Car turning left was struck by a cyclist coming through the intersection. Driver charged with failing to yield and cyclist charged with having no lights.","Car making a right hand turn was struck on the passenger side by a cyclist travelling through the intersection on the sidewalk. Driver charged with failure to yield and cyclist with riding on the sidewalk.","Driver was making a right hand turn when two young cyclists hit the right side of the car. The cyclists were travelling in the crosswalk and charged with failure to yield. (13 yo)","Driver was making a right hand turn when two young cyclists hit the right side of the car. The cyclists were travelling in the crosswalk and charged with failure to yield. (13 yo)","Driver was making a right hand turn when two young cyclists hit the right side of the smart car. Cyclists were travelling in the crosswalk and charged with failure to yield. (12 yo)","Driver was making a right hand turn when two young cyclists hit the right side of the smart car. Cyclists were travelling in the crosswalk and charged with failure to yield. (12 yo)"],["crosswalk","sidewalk","crosswalk","onRoad","onRoad","sidewalk","crosswalk","crosswalk","crosswalk","crosswalk"],["ITVCC","RTVCC","RTCVC","RTCOCVV","LTCVV","RTCOCVV","RTCOCVC","RTCOCVC","RTCOCVC","RTCOCVC"],["UNKNOWN","UNKNOWN","UNKNOWN","D","UNKNOWN","UNKNOWN","UNKNOWN","UNKNOWN","UNKNOWN","UNKNOWN"],["00 none","00 none","00 none","02 minor","01 minimal","01 minimal","00 none","00 none","01 minimal","01 minimal"],["clear","other","clear","clear","clear","clear","clear","clear","clear","clear"],["[40,60)","[40,60)","[25,40)","[25,40)","[60,100]","[25,40)","[40,60)","[40,60)","[40,60)","[40,60)"],["f","f","m","f","m","m","f","f","f","f"],["EMS",null,null,"SELF",null,null,null,null,null,null],["LHSC",null,null,"LHSC",null,null,null,null,null,null],["normal","normal","normal","normal","normal","normal","normal","normal","normal","normal"],["non-normal","normal","normal","normal","normal","normal","normal","normal","normal","normal"],[42.954181,43.012702,42.94356,42.9834,42.999439,42.981989,43.003852,43.003852,43.003852,43.003852],["daylight","daylight","dark","daylight","dawn-dusk","daylight","daylight","daylight","daylight","daylight"],[-81.290625,-81.211579,-81.225794,-81.262816,-81.285439,-81.228571,-81.302784,-81.302784,-81.302784,-81.302784],[null,"139(1)",null,null,"141(5)","142(1)",null,null,null,null],["144(29)","2.12","144(29)",null,"62(17)","2.12","144(29)","144(29)","144(29)","144(29)"],[10,2,15,0,20,15,1,1,1,1],[50,60,60,50,50,50,50,50,50,50],["unknown","unknown","not","unknown","helmet","unknown","unknown","unknown","unknown","unknown"],["intersection","non-intersection","intersection",null,"intersection","intersection","intersection","intersection","intersection","intersection"],["properly","improperly","properly",null,"improperly","improperly","properly","properly","properly","properly"],["signal","stop-yied","signal",null,"stop-yied","signal","signal","signal","signal","signal"],["functioning","functioning","functioning",null,"functioning","functioning","functioning","functioning","functioning","functioning"],["going ahead","going ahead","turning right",null,"turning left","turning right","turning right","turning right","turning right","turning right"],["automobile","automobile","automobile",null,"automobile","truck","automobile","automobile","automobile","automobile"],["west","east","north",null,"west","south","east","east","east","east"],["right front","right front corner","right front",null,"left front","right front","right front corner","right front corner","right front corner","right front corner"],["angle","single motor vehicle(other)","angle",null,"turning movement","sideswipe","angle","angle","angle","angle"],["within intersection","not on roadway-right side","right turn lane",null,"within intersection","within intersection","right turn lane","right turn lane","right turn lane","right turn lane"],["north","north","west",null,"north","east","south","north","south","north"],["front centre","left center","front centre",null,"left rear","left front","front centre","front centre","front centre","front centre"],["angle","single motor vehicle(other)","angle",null,"turning movement","sideswipe","angle","angle","angle","angle"],["improperly","improperly","improperly",null,"improperly","improperly","improperly","improperly","improperly","improperly"],["going ahead","going ahead","going ahead",null,"going ahead","going ahead","going ahead","going ahead","going ahead","going ahead"],[null,20,15,null,1,4,null,null,null,null],["[40,60)","[17,25)","[25,40)",null,"[25,40)","[17,25)","[1,17)",null,"[1,17)",null],[null,null,null,null,"M","F",null,"F",null,"F"],[false,false,false,null,false,false,true,null,true,null],["clear","other","clear","clear","clear","clear","clear","clear","clear","clear"],["sidewalkCycling","sidewalkCycling","sidewalkCycling","Other","Other","sidewalkCycling","Other","sidewalkCycling","Other","sidewalkCycling"],["IT","RT","RT","RTCO","LT","RTCO","RTCO","RTCO","RTCO","RTCO"],["Cfault","Cfault","Cfault","Vfault","Vfault","Vfault","Cfault","Cfault","Cfault","Cfault"],[false,false,false,false,false,false,false,false,false,false],["No injury","No injury","No injury","injured","No injury","No injury","No injury","No injury","No injury","No injury"],[true,true,true,true,true,true,true,true,true,true],[false,false,false,false,false,false,false,false,false,false],[false,true,false,false,true,true,false,false,false,false],[true,true,true,false,true,true,true,true,true,true],[false,false,false,false,false,false,false,false,false,false],[false,false,false,false,false,false,false,false,false,false],[false,true,false,false,false,true,false,false,false,false],["hospital","missing","missing","hospital","missing","missing","missing","missing","missing","missing"],["N6K 2Y8","N5Y 1A5",null,"N6H 2A2","N6G 3T8","N6B 1N4","N6G 1Z7","N6G 1Z7","N6G 1Z7","N6G 1Z7"],["Southcrest","Huron Heights",null,"West London","Medway","Hamilton Road","Medway","Medway","Medway","Medway"],[2006,2006,2006,2006,2006,2006,2006,2006,2006,2006],[1,2,2,3,3,3,3,3,3,3],["2006-01-12","2006-02-18","2006-02-24","2006-03-13","2006-03-27","2006-03-28","2006-03-30","2006-03-30","2006-03-30","2006-03-30"],["2006-01-01","2006-02-01","2006-02-01","2006-03-01","2006-03-01","2006-03-01","2006-03-01","2006-03-01","2006-03-01","2006-03-01"],["Thursday","Saturday","Friday","Monday","Monday","Tuesday","Thursday","Thursday","Thursday","Thursday"],[16,13,20,10,19,16,17,17,17,17],[true,false,false,false,false,true,true,true,true,true],[false,true,false,false,false,false,false,false,false,false],[false,false,false,true,true,false,false,false,false,false],[3,2,1,null,3,3,1,2,1,2],["opposite","orthogonal","orthogonal",null,"opposite","opposite","orthogonal","orthogonal","orthogonal","orthogonal"],["COMMISSIONERS RD W","HIGHBURY AVE N","SOUTHDALE RD E","KENSINGTON PL","SARNIA RD","ADELAIDE ST N","SHERWOOD FOREST SQ","SHERWOOD FOREST SQ","SHERWOOD FOREST SQ","SHERWOOD FOREST SQ"],["WONDERLAND RD S","LANDOR ST","WELLINGTON RD","WHARNCLIFFE RD N","STIRRUP CRT","HAMILTON RD","WONDERLAND RD N","WONDERLAND RD N","WONDERLAND RD N","WONDERLAND RD N"],[4,2,4,null,2,4,3,3,3,3],[4,4,6,null,4,4,4,4,4,4],[1,2,3,4,5,6,7,7,7,7]],"container":"<table class=\"table-condensed\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>file<\/th>\n      <th>date<\/th>\n      <th>location<\/th>\n      <th>description<\/th>\n      <th>walkType<\/th>\n      <th>RHcode<\/th>\n      <th>fledScene<\/th>\n      <th>injury<\/th>\n      <th>environment<\/th>\n      <th>dAge<\/th>\n      <th>dSex<\/th>\n      <th>EMS<\/th>\n      <th>involvedHospital<\/th>\n      <th>dCondition<\/th>\n      <th>cCondition<\/th>\n      <th>lat<\/th>\n      <th>light<\/th>\n      <th>lon<\/th>\n      <th>dCharge<\/th>\n      <th>cCharge<\/th>\n      <th>dSpeed<\/th>\n      <th>pSpeed<\/th>\n      <th>cEquip<\/th>\n      <th>locationType<\/th>\n      <th>dAct<\/th>\n      <th>traControl<\/th>\n      <th>traControlCond<\/th>\n      <th>dManoeuver<\/th>\n      <th>carType<\/th>\n      <th>dDirection<\/th>\n      <th>dImpact<\/th>\n      <th>dImpactType<\/th>\n      <th>impactLocationType<\/th>\n      <th>cDirection<\/th>\n      <th>cImpact<\/th>\n      <th>cImpactType<\/th>\n      <th>cAct<\/th>\n      <th>cManoeuver<\/th>\n      <th>cSpeed<\/th>\n      <th>cAge<\/th>\n      <th>cSex<\/th>\n      <th>is_kid<\/th>\n      <th>rain<\/th>\n      <th>walkType2<\/th>\n      <th>RHgroup<\/th>\n      <th>fault<\/th>\n      <th>is_speeding<\/th>\n      <th>Cinjury<\/th>\n      <th>is_intersection<\/th>\n      <th>is_midblock<\/th>\n      <th>isdCharge<\/th>\n      <th>iscCharge<\/th>\n      <th>is_cMultiple<\/th>\n      <th>is_dMultiple<\/th>\n      <th>sc_ccharge<\/th>\n      <th>hospital<\/th>\n      <th>postal<\/th>\n      <th>neighborhood<\/th>\n      <th>year<\/th>\n      <th>month<\/th>\n      <th>yearmonthday<\/th>\n      <th>yearmonth<\/th>\n      <th>wday<\/th>\n      <th>hour<\/th>\n      <th>rushhour<\/th>\n      <th>weekend<\/th>\n      <th>onRoad<\/th>\n      <th>reDirection1<\/th>\n      <th>reDirection2<\/th>\n      <th>R1new<\/th>\n      <th>R2new<\/th>\n      <th>numR1new<\/th>\n      <th>numR2new<\/th>\n      <th>locationIndex<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-center","targets":1},{"className":"dt-right","targets":[16,18,21,22,39,59,60,64,68,72,73,74]},{"orderable":false,"targets":0}],"scrollX":true,"scrollY":true,"pageLength":2,"lengthMenu":[2,5,10],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="missing-rate-and-unique-values" class="section level2">
+<h2><span class="header-section-number">1.5</span> Missing rate and unique values</h2>
+<pre class="sourceCode r"><code class="sourceCode r">missing_rate &lt;-<span class="st"> </span><span class="kw">apply</span>(collision,<span class="dv">2</span>,<span class="dt">FUN =</span> <span class="cf">function</span>(x){<span class="kw">mean</span>(<span class="kw">is.na</span>(x))})
+UN &lt;-<span class="st"> </span><span class="kw">apply</span>(collision,<span class="dv">2</span>,<span class="dt">FUN =</span> <span class="cf">function</span>(x){<span class="kw">length</span>(<span class="kw">unique</span>(x))})
+colclass &lt;-<span class="st"> </span>collision <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">summarise_all</span>(<span class="cf">function</span>(x)<span class="kw">class</span>(x)[<span class="dv">1</span>]) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">as.matrix</span>() <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">t</span>()
+missing_rate &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">variable=</span><span class="kw">names</span>(missing_rate),
+                           <span class="dt">type=</span>colclass,
+                           <span class="dt">missing_rate=</span>missing_rate,
+                           <span class="dt">uniqueNum=</span>UN)
+<span class="kw">kable</span>(missing_rate,<span class="dt">row.names =</span> <span class="ot">FALSE</span>,<span class="dt">align=</span><span class="kw">c</span>(<span class="st">&#39;c&#39;</span>,<span class="st">&#39;c&#39;</span>,<span class="st">&#39;c&#39;</span>)) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">kable_styling</span>(<span class="dt">full_width =</span> F)</code></pre>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:center;">
+variable
+</th>
+<th style="text-align:center;">
+type
+</th>
+<th style="text-align:center;">
+missing_rate
+</th>
+<th style="text-align:center;">
+uniqueNum
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;">
+file
+</td>
+<td style="text-align:center;">
+character
+</td>
+<td style="text-align:center;">
+0.0000000
+</td>
+<td style="text-align:center;">
+1650
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+date
+</td>
+<td style="text-align:center;">
+POSIXct
+</td>
+<td style="text-align:center;">
+0.0000000
+</td>
+<td style="text-align:center;">
+1647
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+location
+</td>
+<td style="text-align:center;">
+character
+</td>
+<td style="text-align:center;">
+0.0000000
+</td>
+<td style="text-align:center;">
+1058
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+description
+</td>
+<td style="text-align:center;">
+character
+</td>
+<td style="text-align:center;">
+0.0000000
+</td>
+<td style="text-align:center;">
+1644
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+walkType
+</td>
+<td style="text-align:center;">
+character
+</td>
+<td style="text-align:center;">
+0.0000000
+</td>
+<td style="text-align:center;">
+5
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+RHcode
+</td>
+<td style="text-align:center;">
+character
+</td>
+<td style="text-align:center;">
+0.0000000
+</td>
+<td style="text-align:center;">
+37
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+fledScene
+</td>
+<td style="text-align:center;">
+character
+</td>
+<td style="text-align:center;">
+0.0000000
+</td>
+<td style="text-align:center;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+injury
+</td>
+<td style="text-align:center;">
+character
+</td>
+<td style="text-align:center;">
+0.0863527
+</td>
+<td style="text-align:center;">
+6
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+environment
+</td>
+<td style="text-align:center;">
+character
+</td>
+<td style="text-align:center;">
+0.0000000
+</td>
+<td style="text-align:center;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+dAge
+</td>
+<td style="text-align:center;">
+character
+</td>
+<td style="text-align:center;">
+0.1956522
+</td>
+<td style="text-align:center;">
+5
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+dSex
+</td>
+<td style="text-align:center;">
+character
+</td>
+<td style="text-align:center;">
+0.1974638
+</td>
+<td style="text-align:center;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+EMS
+</td>
+<td style="text-align:center;">
+character
+</td>
+<td style="text-align:center;">
+0.4208937
+</td>
+<td style="text-align:center;">
+25
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+involvedHospital
+</td>
+<td style="text-align:center;">
+character
+</td>
+<td style="text-align:center;">
+0.4269324
+</td>
+<td style="text-align:center;">
+18
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+dCondition
+</td>
+<td style="text-align:center;">
+character
+</td>
+<td style="text-align:center;">
+0.0766908
+</td>
+<td style="text-align:center;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+cCondition
+</td>
+<td style="text-align:center;">
+character
+</td>
+<td style="text-align:center;">
+0.0452899
+</td>
+<td style="text-align:center;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+lat
+</td>
+<td style="text-align:center;">
+numeric
+</td>
+<td style="text-align:center;">
+0.0000000
+</td>
+<td style="text-align:center;">
+1188
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+light
+</td>
+<td style="text-align:center;">
+character
+</td>
+<td style="text-align:center;">
+0.0024155
+</td>
+<td style="text-align:center;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+lon
+</td>
+<td style="text-align:center;">
+numeric
+</td>
+<td style="text-align:center;">
+0.0000000
+</td>
+<td style="text-align:center;">
+1220
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+dCharge
+</td>
+<td style="text-align:center;">
+character
+</td>
+<td style="text-align:center;">
+0.7300725
+</td>
+<td style="text-align:center;">
+87
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+cCharge
+</td>
+<td style="text-align:center;">
+character
+</td>
+<td style="text-align:center;">
+0.6074879
+</td>
+<td style="text-align:center;">
+89
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+dSpeed
+</td>
+<td style="text-align:center;">
+integer
+</td>
+<td style="text-align:center;">
+0.1878019
+</td>
+<td style="text-align:center;">
+28
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+pSpeed
+</td>
+<td style="text-align:center;">
+integer
+</td>
+<td style="text-align:center;">
+0.1032609
+</td>
+<td style="text-align:center;">
+10
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+cEquip
+</td>
+<td style="text-align:center;">
+character
+</td>
+<td style="text-align:center;">
+0.0000000
+</td>
+<td style="text-align:center;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+locationType
+</td>
+<td style="text-align:center;">
+character
+</td>
+<td style="text-align:center;">
+0.0688406
+</td>
+<td style="text-align:center;">
+6
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+dAct
+</td>
+<td style="text-align:center;">
+character
+</td>
+<td style="text-align:center;">
+0.0954106
+</td>
+<td style="text-align:center;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+traControl
+</td>
+<td style="text-align:center;">
+character
+</td>
+<td style="text-align:center;">
+0.0797101
+</td>
+<td style="text-align:center;">
+5
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+traControlCond
+</td>
+<td style="text-align:center;">
+character
+</td>
+<td style="text-align:center;">
+0.3556763
+</td>
+<td style="text-align:center;">
+5
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+dManoeuver
+</td>
+<td style="text-align:center;">
+character
+</td>
+<td style="text-align:center;">
+0.0712560
+</td>
+<td style="text-align:center;">
+8
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+carType
+</td>
+<td style="text-align:center;">
+character
+</td>
+<td style="text-align:center;">
+0.0682367
+</td>
+<td style="text-align:center;">
+7
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+dDirection
+</td>
+<td style="text-align:center;">
+character
+</td>
+<td style="text-align:center;">
+0.0724638
+</td>
+<td style="text-align:center;">
+5
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+dImpact
+</td>
+<td style="text-align:center;">
+character
+</td>
+<td style="text-align:center;">
+0.1026570
+</td>
+<td style="text-align:center;">
+19
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+dImpactType
+</td>
+<td style="text-align:center;">
+character
+</td>
+<td style="text-align:center;">
+0.0682367
+</td>
+<td style="text-align:center;">
+9
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+impactLocationType
+</td>
+<td style="text-align:center;">
+character
+</td>
+<td style="text-align:center;">
+0.1111111
+</td>
+<td style="text-align:center;">
+13
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+cDirection
+</td>
+<td style="text-align:center;">
+character
+</td>
+<td style="text-align:center;">
+0.1129227
+</td>
+<td style="text-align:center;">
+5
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+cImpact
+</td>
+<td style="text-align:center;">
+character
+</td>
+<td style="text-align:center;">
+0.1878019
+</td>
+<td style="text-align:center;">
+20
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+cImpactType
+</td>
+<td style="text-align:center;">
+character
+</td>
+<td style="text-align:center;">
+0.1074879
+</td>
+<td style="text-align:center;">
+9
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+cAct
+</td>
+<td style="text-align:center;">
+character
+</td>
+<td style="text-align:center;">
+0.1219807
+</td>
+<td style="text-align:center;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+cManoeuver
+</td>
+<td style="text-align:center;">
+character
+</td>
+<td style="text-align:center;">
+0.1147343
+</td>
+<td style="text-align:center;">
+7
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+cSpeed
+</td>
+<td style="text-align:center;">
+integer
+</td>
+<td style="text-align:center;">
+0.4311594
+</td>
+<td style="text-align:center;">
+26
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+cAge
+</td>
+<td style="text-align:center;">
+character
+</td>
+<td style="text-align:center;">
+0.1630435
+</td>
+<td style="text-align:center;">
+6
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+cSex
+</td>
+<td style="text-align:center;">
+character
+</td>
+<td style="text-align:center;">
+0.2041063
+</td>
+<td style="text-align:center;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+is_kid
+</td>
+<td style="text-align:center;">
+logical
+</td>
+<td style="text-align:center;">
+0.1630435
+</td>
+<td style="text-align:center;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+rain
+</td>
+<td style="text-align:center;">
+character
+</td>
+<td style="text-align:center;">
+0.0000000
+</td>
+<td style="text-align:center;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+walkType2
+</td>
+<td style="text-align:center;">
+character
+</td>
+<td style="text-align:center;">
+0.0000000
+</td>
+<td style="text-align:center;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+RHgroup
+</td>
+<td style="text-align:center;">
+character
+</td>
+<td style="text-align:center;">
+0.0006039
+</td>
+<td style="text-align:center;">
+9
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+fault
+</td>
+<td style="text-align:center;">
+character
+</td>
+<td style="text-align:center;">
+0.0000000
+</td>
+<td style="text-align:center;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+is_speeding
+</td>
+<td style="text-align:center;">
+logical
+</td>
+<td style="text-align:center;">
+0.2252415
+</td>
+<td style="text-align:center;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+Cinjury
+</td>
+<td style="text-align:center;">
+character
+</td>
+<td style="text-align:center;">
+0.0863527
+</td>
+<td style="text-align:center;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+is_intersection
+</td>
+<td style="text-align:center;">
+logical
+</td>
+<td style="text-align:center;">
+0.0000000
+</td>
+<td style="text-align:center;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+is_midblock
+</td>
+<td style="text-align:center;">
+logical
+</td>
+<td style="text-align:center;">
+0.0000000
+</td>
+<td style="text-align:center;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+isdCharge
+</td>
+<td style="text-align:center;">
+logical
+</td>
+<td style="text-align:center;">
+0.0000000
+</td>
+<td style="text-align:center;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+iscCharge
+</td>
+<td style="text-align:center;">
+logical
+</td>
+<td style="text-align:center;">
+0.0000000
+</td>
+<td style="text-align:center;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+is_cMultiple
+</td>
+<td style="text-align:center;">
+logical
+</td>
+<td style="text-align:center;">
+0.0000000
+</td>
+<td style="text-align:center;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+is_dMultiple
+</td>
+<td style="text-align:center;">
+logical
+</td>
+<td style="text-align:center;">
+0.0000000
+</td>
+<td style="text-align:center;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+sc_ccharge
+</td>
+<td style="text-align:center;">
+logical
+</td>
+<td style="text-align:center;">
+0.0000000
+</td>
+<td style="text-align:center;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+hospital
+</td>
+<td style="text-align:center;">
+character
+</td>
+<td style="text-align:center;">
+0.0000000
+</td>
+<td style="text-align:center;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+postal
+</td>
+<td style="text-align:center;">
+character
+</td>
+<td style="text-align:center;">
+0.0036232
+</td>
+<td style="text-align:center;">
+840
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+neighborhood
+</td>
+<td style="text-align:center;">
+character
+</td>
+<td style="text-align:center;">
+0.0036232
+</td>
+<td style="text-align:center;">
+39
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+year
+</td>
+<td style="text-align:center;">
+integer
+</td>
+<td style="text-align:center;">
+0.0000000
+</td>
+<td style="text-align:center;">
+12
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+month
+</td>
+<td style="text-align:center;">
+integer
+</td>
+<td style="text-align:center;">
+0.0000000
+</td>
+<td style="text-align:center;">
+12
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+yearmonthday
+</td>
+<td style="text-align:center;">
+Date
+</td>
+<td style="text-align:center;">
+0.0000000
+</td>
+<td style="text-align:center;">
+1255
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+yearmonth
+</td>
+<td style="text-align:center;">
+Date
+</td>
+<td style="text-align:center;">
+0.0000000
+</td>
+<td style="text-align:center;">
+139
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+wday
+</td>
+<td style="text-align:center;">
+character
+</td>
+<td style="text-align:center;">
+0.0000000
+</td>
+<td style="text-align:center;">
+7
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+hour
+</td>
+<td style="text-align:center;">
+integer
+</td>
+<td style="text-align:center;">
+0.0000000
+</td>
+<td style="text-align:center;">
+24
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+rushhour
+</td>
+<td style="text-align:center;">
+logical
+</td>
+<td style="text-align:center;">
+0.0000000
+</td>
+<td style="text-align:center;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+weekend
+</td>
+<td style="text-align:center;">
+logical
+</td>
+<td style="text-align:center;">
+0.0000000
+</td>
+<td style="text-align:center;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+onRoad
+</td>
+<td style="text-align:center;">
+logical
+</td>
+<td style="text-align:center;">
+0.0000000
+</td>
+<td style="text-align:center;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+reDirection1
+</td>
+<td style="text-align:center;">
+integer
+</td>
+<td style="text-align:center;">
+0.1159420
+</td>
+<td style="text-align:center;">
+5
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+reDirection2
+</td>
+<td style="text-align:center;">
+character
+</td>
+<td style="text-align:center;">
+0.1159420
+</td>
+<td style="text-align:center;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+R1new
+</td>
+<td style="text-align:center;">
+character
+</td>
+<td style="text-align:center;">
+0.0006039
+</td>
+<td style="text-align:center;">
+456
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+R2new
+</td>
+<td style="text-align:center;">
+character
+</td>
+<td style="text-align:center;">
+0.0380435
+</td>
+<td style="text-align:center;">
+354
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+numR1new
+</td>
+<td style="text-align:center;">
+integer
+</td>
+<td style="text-align:center;">
+0.1111111
+</td>
+<td style="text-align:center;">
+8
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+numR2new
+</td>
+<td style="text-align:center;">
+integer
+</td>
+<td style="text-align:center;">
+0.1407005
+</td>
+<td style="text-align:center;">
+9
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+locationIndex
+</td>
+<td style="text-align:center;">
+integer
+</td>
+<td style="text-align:center;">
+0.0000000
+</td>
+<td style="text-align:center;">
+918
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="general-information.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": null,
+"history": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection",
+"scroll_highlight": true
+},
+"toolbar": {
+"position": "fixed"
+},
+"search": false
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

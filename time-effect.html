@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>3 Time Effect | Cycling Collisions in London</title>
+  <meta name="description" content="3 Time Effect | Cycling Collisions in London" />
+  <meta name="generator" content="bookdown 0.10 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="3 Time Effect | Cycling Collisions in London" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="3 Time Effect | Cycling Collisions in London" />
+  
+  
+  
+
+<meta name="author" content="Rebecca Henderson" />
+
+
+<meta name="date" content="2019-05-01" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="general-information.html">
+<link rel="next" href="location-effect.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+<script src="libs/htmlwidgets-1.3/htmlwidgets.js"></script>
+<link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="libs/datatables-binding-0.5/datatables.js"></script>
+<link href="libs/dt-core-1.10.16/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="libs/dt-core-1.10.16/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="libs/dt-core-1.10.16/js/jquery.dataTables.min.js"></script>
+<link href="libs/crosstalk-1.0.0/css/crosstalk.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.0.0/js/crosstalk.min.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<script src="libs/plotly-binding-4.9.0/plotly.js"></script>
+<script src="libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="libs/plotly-htmlwidgets-css-1.46.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotly-main-1.46.1/plotly-latest.min.js"></script>
+<link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
+<script src="libs/leaflet-1.3.1/leaflet.js"></script>
+<link href="libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+<script src="libs/Proj4Leaflet-1.0.1/proj4-compressed.js"></script>
+<script src="libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+<link href="libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
+<script src="libs/leaflet-binding-2.0.2/leaflet.js"></script>
+<link href="libs/leaflet-markercluster-1.0.5/MarkerCluster.css" rel="stylesheet" />
+<link href="libs/leaflet-markercluster-1.0.5/MarkerCluster.Default.css" rel="stylesheet" />
+<script src="libs/leaflet-markercluster-1.0.5/leaflet.markercluster.js"></script>
+<script src="libs/leaflet-markercluster-1.0.5/leaflet.markercluster.freezable.js"></script>
+<script src="libs/leaflet-markercluster-1.0.5/leaflet.markercluster.layersupport.js"></script>
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="preparations.html"><a href="preparations.html"><i class="fa fa-check"></i><b>1</b> Preparations</a><ul>
+<li class="chapter" data-level="1.1" data-path="preparations.html"><a href="preparations.html#load-libraries"><i class="fa fa-check"></i><b>1.1</b> Load libraries</a></li>
+<li class="chapter" data-level="1.2" data-path="preparations.html"><a href="preparations.html#read-data"><i class="fa fa-check"></i><b>1.2</b> Read data</a></li>
+<li class="chapter" data-level="1.3" data-path="preparations.html"><a href="preparations.html#data-structure"><i class="fa fa-check"></i><b>1.3</b> Data structure</a></li>
+<li class="chapter" data-level="1.4" data-path="preparations.html"><a href="preparations.html#view"><i class="fa fa-check"></i><b>1.4</b> View</a></li>
+<li class="chapter" data-level="1.5" data-path="preparations.html"><a href="preparations.html#missing-rate-and-unique-values"><i class="fa fa-check"></i><b>1.5</b> Missing rate and unique values</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="general-information.html"><a href="general-information.html"><i class="fa fa-check"></i><b>2</b> General Information</a><ul>
+<li class="chapter" data-level="2.1" data-path="general-information.html"><a href="general-information.html#walking"><i class="fa fa-check"></i><b>2.1</b> Walking</a></li>
+<li class="chapter" data-level="2.2" data-path="general-information.html"><a href="general-information.html#charge"><i class="fa fa-check"></i><b>2.2</b> Charge</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="general-information.html"><a href="general-information.html#number-of-charges-for-adults"><i class="fa fa-check"></i><b>2.2.1</b> Number of charges for adults</a></li>
+<li class="chapter" data-level="2.2.2" data-path="general-information.html"><a href="general-information.html#number-of-adults-involved-in-cyclist-charges"><i class="fa fa-check"></i><b>2.2.2</b> Number of adults involved in cyclist charges</a></li>
+<li class="chapter" data-level="2.2.3" data-path="general-information.html"><a href="general-information.html#charge-of-cyclists-vs-rain"><i class="fa fa-check"></i><b>2.2.3</b> Charge of cyclists vs rain</a></li>
+<li class="chapter" data-level="2.2.4" data-path="general-information.html"><a href="general-information.html#charge-of-drivers-vs-rain"><i class="fa fa-check"></i><b>2.2.4</b> Charge of drivers vs rain</a></li>
+<li class="chapter" data-level="2.2.5" data-path="general-information.html"><a href="general-information.html#charge-of-drivers-vs-walking"><i class="fa fa-check"></i><b>2.2.5</b> Charge of drivers vs walking</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="general-information.html"><a href="general-information.html#fault"><i class="fa fa-check"></i><b>2.3</b> fault</a></li>
+<li class="chapter" data-level="2.4" data-path="general-information.html"><a href="general-information.html#enviorment"><i class="fa fa-check"></i><b>2.4</b> Enviorment</a></li>
+<li class="chapter" data-level="2.5" data-path="general-information.html"><a href="general-information.html#manoeuver"><i class="fa fa-check"></i><b>2.5</b> Manoeuver</a></li>
+<li class="chapter" data-level="2.6" data-path="general-information.html"><a href="general-information.html#injurythree"><i class="fa fa-check"></i><b>2.6</b> injuryThree</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="time-effect.html"><a href="time-effect.html"><i class="fa fa-check"></i><b>3</b> Time Effect</a><ul>
+<li class="chapter" data-level="3.1" data-path="time-effect.html"><a href="time-effect.html#time-factor"><i class="fa fa-check"></i><b>3.1</b> Time factor</a></li>
+<li class="chapter" data-level="3.2" data-path="time-effect.html"><a href="time-effect.html#monthly-aggregation-for-each-year"><i class="fa fa-check"></i><b>3.2</b> Monthly aggregation for each year</a></li>
+<li class="chapter" data-level="3.3" data-path="time-effect.html"><a href="time-effect.html#yearly-aggregation"><i class="fa fa-check"></i><b>3.3</b> Yearly aggregation</a></li>
+<li class="chapter" data-level="3.4" data-path="time-effect.html"><a href="time-effect.html#monthly-aggregation"><i class="fa fa-check"></i><b>3.4</b> Monthly aggregation</a></li>
+<li class="chapter" data-level="3.5" data-path="time-effect.html"><a href="time-effect.html#rush-hour"><i class="fa fa-check"></i><b>3.5</b> Rush hour</a></li>
+<li class="chapter" data-level="3.6" data-path="time-effect.html"><a href="time-effect.html#day-aggregation"><i class="fa fa-check"></i><b>3.6</b> Day aggregation</a></li>
+<li class="chapter" data-level="3.7" data-path="time-effect.html"><a href="time-effect.html#hour-aggregation"><i class="fa fa-check"></i><b>3.7</b> Hour aggregation</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="location-effect.html"><a href="location-effect.html"><i class="fa fa-check"></i><b>4</b> Location Effect</a><ul>
+<li class="chapter" data-level="4.1" data-path="location-effect.html"><a href="location-effect.html#get-map"><i class="fa fa-check"></i><b>4.1</b> GET MAP</a></li>
+<li class="chapter" data-level="4.2" data-path="location-effect.html"><a href="location-effect.html#scatterplot"><i class="fa fa-check"></i><b>4.2</b> Scatterplot</a></li>
+<li class="chapter" data-level="4.3" data-path="location-effect.html"><a href="location-effect.html#heatmap"><i class="fa fa-check"></i><b>4.3</b> Heatmap</a></li>
+<li class="chapter" data-level="4.4" data-path="location-effect.html"><a href="location-effect.html#count-by-location"><i class="fa fa-check"></i><b>4.4</b> Count by location</a></li>
+<li class="chapter" data-level="4.5" data-path="location-effect.html"><a href="location-effect.html#count-by-neigbourhood"><i class="fa fa-check"></i><b>4.5</b> Count by Neigbourhood</a></li>
+<li class="chapter" data-level="4.6" data-path="location-effect.html"><a href="location-effect.html#interactive-map-with-injury-label"><i class="fa fa-check"></i><b>4.6</b> Interactive map with injury label</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="model-for-the-number-of-collision.html"><a href="model-for-the-number-of-collision.html"><i class="fa fa-check"></i><b>5</b> Model for the Number of Collision</a><ul>
+<li class="chapter" data-level="5.1" data-path="model-for-the-number-of-collision.html"><a href="model-for-the-number-of-collision.html#grouped-by-location-and-year"><i class="fa fa-check"></i><b>5.1</b> Grouped by location and year</a></li>
+<li class="chapter" data-level="5.2" data-path="model-for-the-number-of-collision.html"><a href="model-for-the-number-of-collision.html#poisson-model"><i class="fa fa-check"></i><b>5.2</b> Poisson model</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="model-for-injury-level-of-collision.html"><a href="model-for-injury-level-of-collision.html"><i class="fa fa-check"></i><b>6</b> Model for Injury Level of Collision</a><ul>
+<li class="chapter" data-level="6.1" data-path="model-for-injury-level-of-collision.html"><a href="model-for-injury-level-of-collision.html#baseline-for-categorical-variables"><i class="fa fa-check"></i><b>6.1</b> Baseline for categorical variables</a></li>
+<li class="chapter" data-level="6.2" data-path="model-for-injury-level-of-collision.html"><a href="model-for-injury-level-of-collision.html#multinominal-model"><i class="fa fa-check"></i><b>6.2</b> Multinominal model</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Cycling Collisions in London</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="time-effect" class="section level1 tabset tabset-fade">
+<h1><span class="header-section-number">3</span> Time Effect</h1>
+<div id="time-factor" class="section level2">
+<h2><span class="header-section-number">3.1</span> Time factor</h2>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Time range of the data</span>
+<span class="kw">range</span>(collision<span class="op">$</span>date,<span class="dt">na.rm =</span> <span class="ot">TRUE</span>)</code></pre>
+<pre><code>## [1] &quot;2006-01-12 16:15:00 UTC&quot; &quot;2017-12-15 09:00:00 UTC&quot;</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">head</span>(collision <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">      </span>dplyr<span class="op">::</span><span class="kw">select</span>(date,year,month,yearmonth,wday,hour,rushhour,weekend) )</code></pre>
+<pre><code>## # A tibble: 6 x 8
+##   date                 year month yearmonth  wday     hour rushhour weekend
+##   &lt;dttm&gt;              &lt;int&gt; &lt;int&gt; &lt;date&gt;     &lt;chr&gt;   &lt;int&gt; &lt;lgl&gt;    &lt;lgl&gt;  
+## 1 2006-01-12 16:15:00  2006     1 2006-01-01 Thursd~    16 TRUE     FALSE  
+## 2 2006-02-18 13:55:00  2006     2 2006-02-01 Saturd~    13 FALSE    TRUE   
+## 3 2006-02-24 20:20:00  2006     2 2006-02-01 Friday     20 FALSE    FALSE  
+## 4 2006-03-13 10:00:00  2006     3 2006-03-01 Monday     10 FALSE    FALSE  
+## 5 2006-03-27 19:30:00  2006     3 2006-03-01 Monday     19 FALSE    FALSE  
+## 6 2006-03-28 16:33:00  2006     3 2006-03-01 Tuesday    16 TRUE     FALSE</code></pre>
+</div>
+<div id="monthly-aggregation-for-each-year" class="section level2">
+<h2><span class="header-section-number">3.2</span> Monthly aggregation for each year</h2>
+<pre class="sourceCode r"><code class="sourceCode r">collision_yearmonth &lt;-<span class="st"> </span>collision <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">group_by</span>(yearmonth) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">summarise</span>(<span class="dt">Count=</span><span class="kw">n</span>())
+
+collision_yearmonth <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> yearmonth, <span class="dt">y=</span>Count))<span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_point</span>()<span class="op">+</span>
+<span class="st">  </span><span class="kw">labs</span>(<span class="dt">x=</span><span class="st">&quot;Date&quot;</span>,<span class="dt">y=</span><span class="st">&quot;Count&quot;</span>)<span class="op">+</span>
+<span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Monthly Number of Collisions in London from Jan 2006 to Dec 2017&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">scale_x_date</span>(<span class="dt">date_breaks =</span> <span class="st">&quot;1 years&quot;</span>)  </code></pre>
+<p><img src="LondonCollision_EDA_May1_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
+<pre class="sourceCode r"><code class="sourceCode r">collision_yearmonth <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">month=</span><span class="kw">month</span>(yearmonth)) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x=</span><span class="kw">factor</span>(month),<span class="dt">y=</span>Count))<span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_boxplot</span>()<span class="op">+</span>
+<span class="st">  </span><span class="kw">labs</span>(<span class="dt">x=</span><span class="st">&quot;month&quot;</span>,<span class="dt">y=</span><span class="st">&quot;Count&quot;</span>)<span class="op">+</span>
+<span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Total Number of Collisions for each Month in London from 2006 to 2017&quot;</span>)<span class="op">+</span>
+<span class="st">  </span><span class="kw">scale_x_discrete</span>(<span class="dt">breaks=</span><span class="dv">1</span><span class="op">:</span><span class="dv">12</span>,<span class="dt">labels =</span> month.abb ) </code></pre>
+<p><img src="LondonCollision_EDA_May1_files/figure-html/unnamed-chunk-14-2.png" width="672" /></p>
+</div>
+<div id="yearly-aggregation" class="section level2">
+<h2><span class="header-section-number">3.3</span> Yearly aggregation</h2>
+<pre class="sourceCode r"><code class="sourceCode r">collision_year &lt;-<span class="st"> </span>collision <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">group_by</span>(year) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">summarise</span>(<span class="dt">Count=</span><span class="kw">n</span>())
+
+p_year &lt;-<span class="st"> </span>collision_year <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> year, <span class="dt">y=</span>Count))<span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_point</span>()<span class="op">+</span>
+<span class="st">  </span><span class="kw">labs</span>(<span class="dt">x=</span><span class="st">&quot;Date&quot;</span>,<span class="dt">y=</span><span class="st">&quot;Count&quot;</span>)<span class="op">+</span>
+<span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Yearly Number of Collisions in London from 2006 to 2017&quot;</span>)<span class="op">+</span>
+<span class="st">  </span><span class="kw">scale_x_continuous</span>(<span class="dt">breaks=</span><span class="dv">2006</span><span class="op">:</span><span class="dv">2017</span>)<span class="op">+</span>
+<span class="st">  </span><span class="kw">theme_minimal</span>()
+
+<span class="kw">ggplotly</span>(p_year)</code></pre>
+<div id="htmlwidget-db7dccdaef3cf1bcb42a" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-db7dccdaef3cf1bcb42a">{"x":{"data":[{"x":[2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017],"y":[149,135,160,173,144,155,146,114,138,124,110,108],"text":["year: 2006<br />Count: 149","year: 2007<br />Count: 135","year: 2008<br />Count: 160","year: 2009<br />Count: 173","year: 2010<br />Count: 144","year: 2011<br />Count: 155","year: 2012<br />Count: 146","year: 2013<br />Count: 114","year: 2014<br />Count: 138","year: 2015<br />Count: 124","year: 2016<br />Count: 110","year: 2017<br />Count: 108"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(0,0,0,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":43.7625570776256,"r":7.30593607305936,"b":40.1826484018265,"l":43.1050228310502},"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"title":{"text":"Yearly Number of Collisions in London from 2006 to 2017","font":{"color":"rgba(0,0,0,1)","family":"","size":17.5342465753425},"x":0,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[2005.45,2017.55],"tickmode":"array","ticktext":["2006","2007","2008","2009","2010","2011","2012","2013","2014","2015","2016","2017"],"tickvals":[2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017],"categoryorder":"array","categoryarray":["2006","2007","2008","2009","2010","2011","2012","2013","2014","2015","2016","2017"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"y","title":{"text":"Date","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[104.75,176.25],"tickmode":"array","ticktext":["120","140","160"],"tickvals":[120,140,160],"categoryorder":"array","categoryarray":["120","140","160"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"x","title":{"text":"Count","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false},"source":"A","attrs":{"3724566d2ba3":{"x":{},"y":{},"type":"scatter"}},"cur_data":"3724566d2ba3","visdat":{"3724566d2ba3":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<pre class="sourceCode r"><code class="sourceCode r">collision_year_injury &lt;-<span class="st"> </span>collision <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">group_by</span>(year) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">summarise</span>(<span class="dt">Count=</span><span class="kw">n</span>(), 
+            <span class="dt">rNone =</span> <span class="kw">mean</span>(injury<span class="op">==</span><span class="st">&quot;00 none&quot;</span>,<span class="dt">na.rm=</span><span class="ot">TRUE</span>),
+            <span class="dt">rMinor=</span><span class="kw">mean</span>(injury <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;01 minimal&quot;</span>,<span class="st">&quot;02 minor&quot;</span>),<span class="dt">na.rm=</span><span class="ot">TRUE</span>),
+            <span class="dt">rSevere=</span><span class="kw">mean</span>(injury <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;03 major&quot;</span>,<span class="st">&quot;04 fatal&quot;</span>),<span class="dt">na.rm=</span><span class="ot">TRUE</span>) )
+
+<span class="co">#</span>
+p_year_injury &lt;-<span class="st"> </span>collision_year_injury <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> year, <span class="dt">y=</span>rNone))<span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_point</span>()<span class="op">+</span>
+<span class="st">  </span><span class="kw">labs</span>(<span class="dt">x=</span><span class="st">&quot;Date&quot;</span>,<span class="dt">y=</span><span class="st">&quot;Proportion of No Injury&quot;</span>)<span class="op">+</span>
+<span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Yearly Proportion of No Injury in London from 2006 to 2017&quot;</span>)<span class="op">+</span>
+<span class="st">  </span><span class="kw">scale_x_continuous</span>(<span class="dt">breaks=</span><span class="dv">2006</span><span class="op">:</span><span class="dv">2017</span>)<span class="op">+</span>
+<span class="st">  </span><span class="kw">ylim</span>(<span class="dv">0</span>,<span class="dv">1</span>)<span class="op">+</span>
+<span class="st">  </span><span class="kw">theme_minimal</span>()
+
+<span class="kw">ggplotly</span>(p_year_injury)</code></pre>
+<div id="htmlwidget-ff06a727288e3a1ccc18" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-ff06a727288e3a1ccc18">{"x":{"data":[{"x":[2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017],"y":[0.18978102189781,0.136363636363636,0.0980392156862745,0.0632911392405063,0.0225563909774436,0.0211267605633803,0.0373134328358209,0.0377358490566038,0.008,0.0277777777777778,0,0.010989010989011],"text":["year: 2006<br />rNone: 0.18978102","year: 2007<br />rNone: 0.13636364","year: 2008<br />rNone: 0.09803922","year: 2009<br />rNone: 0.06329114","year: 2010<br />rNone: 0.02255639","year: 2011<br />rNone: 0.02112676","year: 2012<br />rNone: 0.03731343","year: 2013<br />rNone: 0.03773585","year: 2014<br />rNone: 0.00800000","year: 2015<br />rNone: 0.02777778","year: 2016<br />rNone: 0.00000000","year: 2017<br />rNone: 0.01098901"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(0,0,0,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":43.7625570776256,"r":7.30593607305936,"b":40.1826484018265,"l":48.9497716894977},"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"title":{"text":"Yearly Proportion of No Injury in London from 2006 to 2017","font":{"color":"rgba(0,0,0,1)","family":"","size":17.5342465753425},"x":0,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[2005.45,2017.55],"tickmode":"array","ticktext":["2006","2007","2008","2009","2010","2011","2012","2013","2014","2015","2016","2017"],"tickvals":[2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017],"categoryorder":"array","categoryarray":["2006","2007","2008","2009","2010","2011","2012","2013","2014","2015","2016","2017"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"y","title":{"text":"Date","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-0.05,1.05],"tickmode":"array","ticktext":["0.00","0.25","0.50","0.75","1.00"],"tickvals":[0,0.25,0.5,0.75,1],"categoryorder":"array","categoryarray":["0.00","0.25","0.50","0.75","1.00"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"x","title":{"text":"Proportion of No Injury","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false},"source":"A","attrs":{"3724395e6435":{"x":{},"y":{},"type":"scatter"}},"cur_data":"3724395e6435","visdat":{"3724395e6435":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co">#</span>
+p_year_injury &lt;-<span class="st"> </span>collision_year_injury <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> year, <span class="dt">y=</span>rMinor))<span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_point</span>()<span class="op">+</span>
+<span class="st">  </span><span class="kw">labs</span>(<span class="dt">x=</span><span class="st">&quot;Date&quot;</span>,<span class="dt">y=</span><span class="st">&quot;Proportion of none or minor Injury&quot;</span>)<span class="op">+</span>
+<span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Yearly Proportion of none or minor  Injury in London from 2006 to 2017&quot;</span>)<span class="op">+</span>
+<span class="st">  </span><span class="kw">scale_x_continuous</span>(<span class="dt">breaks=</span><span class="dv">2006</span><span class="op">:</span><span class="dv">2017</span>)<span class="op">+</span>
+<span class="st">  </span><span class="kw">ylim</span>(<span class="dv">0</span>,<span class="dv">1</span>)<span class="op">+</span>
+<span class="st">  </span><span class="kw">theme_minimal</span>()
+
+<span class="kw">ggplotly</span>(p_year_injury)</code></pre>
+<div id="htmlwidget-034229dfd5b2fd47a453" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-034229dfd5b2fd47a453">{"x":{"data":[{"x":[2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017],"y":[0.697986577181208,0.822222222222222,0.81875,0.826589595375723,0.854166666666667,0.870967741935484,0.849315068493151,0.833333333333333,0.855072463768116,0.766129032258065,0.809090909090909,0.777777777777778],"text":["year: 2006<br />rMinor: 0.6979866","year: 2007<br />rMinor: 0.8222222","year: 2008<br />rMinor: 0.8187500","year: 2009<br />rMinor: 0.8265896","year: 2010<br />rMinor: 0.8541667","year: 2011<br />rMinor: 0.8709677","year: 2012<br />rMinor: 0.8493151","year: 2013<br />rMinor: 0.8333333","year: 2014<br />rMinor: 0.8550725","year: 2015<br />rMinor: 0.7661290","year: 2016<br />rMinor: 0.8090909","year: 2017<br />rMinor: 0.7777778"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(0,0,0,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":43.7625570776256,"r":7.30593607305936,"b":40.1826484018265,"l":48.9497716894977},"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"title":{"text":"Yearly Proportion of none or minor  Injury in London from 2006 to 2017","font":{"color":"rgba(0,0,0,1)","family":"","size":17.5342465753425},"x":0,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[2005.45,2017.55],"tickmode":"array","ticktext":["2006","2007","2008","2009","2010","2011","2012","2013","2014","2015","2016","2017"],"tickvals":[2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017],"categoryorder":"array","categoryarray":["2006","2007","2008","2009","2010","2011","2012","2013","2014","2015","2016","2017"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"y","title":{"text":"Date","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-0.05,1.05],"tickmode":"array","ticktext":["0.00","0.25","0.50","0.75","1.00"],"tickvals":[0,0.25,0.5,0.75,1],"categoryorder":"array","categoryarray":["0.00","0.25","0.50","0.75","1.00"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"x","title":{"text":"Proportion of none or minor Injury","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false},"source":"A","attrs":{"37245801901":{"x":{},"y":{},"type":"scatter"}},"cur_data":"37245801901","visdat":{"37245801901":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co">#</span>
+p_year_injury &lt;-<span class="st"> </span>collision_year_injury <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> year, <span class="dt">y=</span>rSevere))<span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_point</span>()<span class="op">+</span>
+<span class="st">  </span><span class="kw">labs</span>(<span class="dt">x=</span><span class="st">&quot;Date&quot;</span>,<span class="dt">y=</span><span class="st">&quot;Proportion of Severe Injury&quot;</span>)<span class="op">+</span>
+<span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Yearly Proportion of Severe Injury in London from 2006 to 2017&quot;</span>)<span class="op">+</span>
+<span class="st">  </span><span class="kw">scale_x_continuous</span>(<span class="dt">breaks=</span><span class="dv">2006</span><span class="op">:</span><span class="dv">2017</span>)<span class="op">+</span>
+<span class="st">  </span><span class="kw">ylim</span>(<span class="dv">0</span>,<span class="dv">1</span>)<span class="op">+</span>
+<span class="st">  </span><span class="kw">theme_minimal</span>()
+
+<span class="kw">ggplotly</span>(p_year_injury)</code></pre>
+<div id="htmlwidget-77cc6afc3a8bd839f28c" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-77cc6afc3a8bd839f28c">{"x":{"data":[{"x":[2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017],"y":[0.0469798657718121,0.0222222222222222,0.04375,0.0289017341040462,0.0486111111111111,0.0258064516129032,0.0342465753424658,0.0614035087719298,0.0434782608695652,0.0806451612903226,0.0454545454545455,0.0555555555555556],"text":["year: 2006<br />rSevere: 0.04697987","year: 2007<br />rSevere: 0.02222222","year: 2008<br />rSevere: 0.04375000","year: 2009<br />rSevere: 0.02890173","year: 2010<br />rSevere: 0.04861111","year: 2011<br />rSevere: 0.02580645","year: 2012<br />rSevere: 0.03424658","year: 2013<br />rSevere: 0.06140351","year: 2014<br />rSevere: 0.04347826","year: 2015<br />rSevere: 0.08064516","year: 2016<br />rSevere: 0.04545455","year: 2017<br />rSevere: 0.05555556"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(0,0,0,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":43.7625570776256,"r":7.30593607305936,"b":40.1826484018265,"l":48.9497716894977},"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"title":{"text":"Yearly Proportion of Severe Injury in London from 2006 to 2017","font":{"color":"rgba(0,0,0,1)","family":"","size":17.5342465753425},"x":0,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[2005.45,2017.55],"tickmode":"array","ticktext":["2006","2007","2008","2009","2010","2011","2012","2013","2014","2015","2016","2017"],"tickvals":[2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017],"categoryorder":"array","categoryarray":["2006","2007","2008","2009","2010","2011","2012","2013","2014","2015","2016","2017"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"y","title":{"text":"Date","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-0.05,1.05],"tickmode":"array","ticktext":["0.00","0.25","0.50","0.75","1.00"],"tickvals":[0,0.25,0.5,0.75,1],"categoryorder":"array","categoryarray":["0.00","0.25","0.50","0.75","1.00"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"x","title":{"text":"Proportion of Severe Injury","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false},"source":"A","attrs":{"37242f862673":{"x":{},"y":{},"type":"scatter"}},"cur_data":"37242f862673","visdat":{"37242f862673":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="monthly-aggregation" class="section level2">
+<h2><span class="header-section-number">3.4</span> Monthly aggregation</h2>
+<pre class="sourceCode r"><code class="sourceCode r">collision_month &lt;-<span class="st"> </span>collision <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">group_by</span>(month) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">summarise</span>(<span class="dt">Count=</span><span class="kw">n</span>())
+
+<span class="co">#month.abb</span>
+p_month &lt;-<span class="st"> </span>collision_month <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> month, <span class="dt">y=</span>Count))<span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_point</span>()<span class="op">+</span>
+<span class="st">  </span><span class="kw">labs</span>(<span class="dt">x=</span><span class="st">&quot;Month&quot;</span>,<span class="dt">y=</span><span class="st">&quot;Count&quot;</span>)<span class="op">+</span>
+<span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Number of Collisions for each month in London from 2006 to 2017&quot;</span>)<span class="op">+</span>
+<span class="st">  </span><span class="kw">scale_x_continuous</span>(<span class="dt">breaks=</span><span class="dv">1</span><span class="op">:</span><span class="dv">12</span>,<span class="dt">labels =</span> month.abb ) <span class="co">#+</span>
+  <span class="co">#theme_minimal()</span>
+ 
+<span class="kw">ggplotly</span>(p_month)</code></pre>
+<div id="htmlwidget-239d5598e75da6bf385d" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-239d5598e75da6bf385d">{"x":{"data":[{"x":[1,2,3,4,5,6,7,8,9,10,11,12],"y":[27,24,56,99,175,252,244,266,224,156,87,46],"text":["month:  1<br />Count:  27","month:  2<br />Count:  24","month:  3<br />Count:  56","month:  4<br />Count:  99","month:  5<br />Count: 175","month:  6<br />Count: 252","month:  7<br />Count: 244","month:  8<br />Count: 266","month:  9<br />Count: 224","month: 10<br />Count: 156","month: 11<br />Count:  87","month: 12<br />Count:  46"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(0,0,0,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":43.7625570776256,"r":7.30593607305936,"b":40.1826484018265,"l":43.1050228310502},"plot_bgcolor":"rgba(235,235,235,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"title":{"text":"Number of Collisions for each month in London from 2006 to 2017","font":{"color":"rgba(0,0,0,1)","family":"","size":17.5342465753425},"x":0,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.45,12.55],"tickmode":"array","ticktext":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"tickvals":[1,2,3,4,5,6,7,8,9,10,11,12],"categoryorder":"array","categoryarray":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"y","title":{"text":"Month","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[11.9,278.1],"tickmode":"array","ticktext":["100","200"],"tickvals":[100,200],"categoryorder":"array","categoryarray":["100","200"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"x","title":{"text":"Count","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.88976377952756,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false},"source":"A","attrs":{"372413e5153c":{"x":{},"y":{},"type":"scatter"}},"cur_data":"372413e5153c","visdat":{"372413e5153c":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="rush-hour" class="section level2">
+<h2><span class="header-section-number">3.5</span> Rush hour</h2>
+<pre class="sourceCode r"><code class="sourceCode r">collision <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(rushhour))<span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_bar</span>()<span class="op">+</span>
+<span class="st">  </span><span class="kw">labs</span>(<span class="dt">x=</span><span class="st">&quot;day&quot;</span>,<span class="dt">y=</span><span class="st">&quot;Count&quot;</span>)<span class="op">+</span>
+<span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Count with rush hour&quot;</span>)</code></pre>
+<p><img src="LondonCollision_EDA_May1_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
+<pre class="sourceCode r"><code class="sourceCode r">collision_rush &lt;-<span class="st"> </span>collision <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">filter</span>(<span class="op">!</span>weekend) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">group_by</span>(year,rushhour) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">summarise</span>(<span class="dt">Count=</span><span class="kw">n</span>())
+
+<span class="kw">t.test</span>(<span class="dt">x =</span> collision_rush<span class="op">$</span>Count[collision_rush<span class="op">$</span>rushhour],
+       <span class="dt">y =</span> collision_rush<span class="op">$</span>Count[<span class="op">!</span>collision_rush<span class="op">$</span>rushhour],
+       <span class="dt">paired =</span> <span class="ot">TRUE</span>,<span class="dt">alternative =</span> <span class="st">&quot;greater&quot;</span>)</code></pre>
+<pre><code>## 
+##  Paired t-test
+## 
+## data:  collision_rush$Count[collision_rush$rushhour] and collision_rush$Count[!collision_rush$rushhour]
+## t = -4.5584, df = 11, p-value = 0.9996
+## alternative hypothesis: true difference in means is greater than 0
+## 95 percent confidence interval:
+##  -12.31339       Inf
+## sample estimates:
+## mean of the differences 
+##               -8.833333</code></pre>
+</div>
+<div id="day-aggregation" class="section level2">
+<h2><span class="header-section-number">3.6</span> Day aggregation</h2>
+<pre class="sourceCode r"><code class="sourceCode r">collision_wday &lt;-<span class="st"> </span>collision <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">group_by</span>(wday) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">summarise</span>(<span class="dt">Count=</span><span class="kw">n</span>())
+
+collision_wday<span class="op">$</span>wday &lt;-<span class="st"> </span><span class="kw">ordered</span>(collision_wday<span class="op">$</span>wday,<span class="kw">c</span>(<span class="st">&quot;Monday&quot;</span>,<span class="st">&quot;Tuesday&quot;</span>,<span class="st">&quot;Wednesday&quot;</span>,
+<span class="st">&quot;Thursday&quot;</span>,<span class="st">&quot;Friday&quot;</span>,<span class="st">&quot;Saturday&quot;</span>,<span class="st">&quot;Sunday&quot;</span>))
+<span class="kw">levels</span>(collision_wday<span class="op">$</span>wday) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Mon&quot;</span>,<span class="st">&quot;Tues&quot;</span>,<span class="st">&quot;Wed&quot;</span>,<span class="st">&quot;Thurs&quot;</span>,<span class="st">&quot;Fri&quot;</span>,<span class="st">&quot;Sat&quot;</span>,<span class="st">&quot;Sun&quot;</span>)
+collision_wday <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> wday, <span class="dt">y=</span>Count))<span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_point</span>()<span class="op">+</span>
+<span class="st">  </span><span class="kw">labs</span>(<span class="dt">x=</span><span class="st">&quot;day&quot;</span>,<span class="dt">y=</span><span class="st">&quot;Count&quot;</span>)<span class="op">+</span>
+<span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Total Number of Collisions for each day in London from 2006 to 2017&quot;</span>)</code></pre>
+<p><img src="LondonCollision_EDA_May1_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
+<pre class="sourceCode r"><code class="sourceCode r">collision<span class="op">$</span>wday &lt;-<span class="st"> </span><span class="kw">ordered</span>(collision<span class="op">$</span>wday,
+                         <span class="kw">c</span>(<span class="st">&quot;Monday&quot;</span>,<span class="st">&quot;Tuesday&quot;</span>,<span class="st">&quot;Wednesday&quot;</span>,
+                           <span class="st">&quot;Thursday&quot;</span>,<span class="st">&quot;Friday&quot;</span>,<span class="st">&quot;Saturday&quot;</span>,<span class="st">&quot;Sunday&quot;</span>))
+p_wday &lt;-<span class="st"> </span>collision <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(wday))<span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_bar</span>()<span class="op">+</span>
+<span class="st">  </span><span class="kw">labs</span>(<span class="dt">x=</span><span class="st">&quot;day&quot;</span>,<span class="dt">y=</span><span class="st">&quot;Count&quot;</span>)<span class="op">+</span>
+<span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Total Number of Collisions for each day in London from 2006 to 2017&quot;</span>)
+
+<span class="kw">ggplotly</span>(p_wday) <span class="co">#One more step beyong ggplot to make it interactive</span></code></pre>
+<div id="htmlwidget-ea8e110d763426fa6914" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-ea8e110d763426fa6914">{"x":{"data":[{"orientation":"v","width":[0.9,0.9,0.9,0.9,0.9,0.9,0.9],"base":[0,0,0,0,0,0,0],"x":[1,2,3,4,5,6,7],"y":[254,293,273,284,254,161,137],"text":["count: 254<br />wday: Monday","count: 293<br />wday: Tuesday","count: 273<br />wday: Wednesday","count: 284<br />wday: Thursday","count: 254<br />wday: Friday","count: 161<br />wday: Saturday","count: 137<br />wday: Sunday"],"type":"bar","marker":{"autocolorscale":false,"color":"rgba(89,89,89,1)","line":{"width":1.88976377952756,"color":"transparent"}},"showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":43.7625570776256,"r":7.30593607305936,"b":40.1826484018265,"l":43.1050228310502},"plot_bgcolor":"rgba(235,235,235,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"title":{"text":"Total Number of Collisions for each day in London from 2006 to 2017","font":{"color":"rgba(0,0,0,1)","family":"","size":17.5342465753425},"x":0,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.4,7.6],"tickmode":"array","ticktext":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"tickvals":[1,2,3,4,5,6,7],"categoryorder":"array","categoryarray":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"y","title":{"text":"day","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-14.65,307.65],"tickmode":"array","ticktext":["0","100","200","300"],"tickvals":[0,100,200,300],"categoryorder":"array","categoryarray":["0","100","200","300"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"x","title":{"text":"Count","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.88976377952756,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false},"source":"A","attrs":{"3724518e705e":{"x":{},"type":"bar"}},"cur_data":"3724518e705e","visdat":{"3724518e705e":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="hour-aggregation" class="section level2">
+<h2><span class="header-section-number">3.7</span> Hour aggregation</h2>
+<pre class="sourceCode r"><code class="sourceCode r">collision_hour &lt;-<span class="st"> </span>collision <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">filter</span>(<span class="op">!</span>weekend) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">group_by</span>(hour) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">summarise</span>(<span class="dt">Count=</span><span class="kw">n</span>())
+
+<span class="co">#collision_hour &lt;- collision_hour %&gt;% mutate(prop=Count/sum(Count))</span>
+<span class="co">#print(tbl_df(collision_hour), n=25)</span>
+
+<span class="co">#Interactive figure with plotly</span>
+p_hour &lt;-<span class="st"> </span>collision_hour <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> hour, <span class="dt">y=</span>Count))<span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">colour=</span><span class="st">&quot;red&quot;</span>)<span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_line</span>(<span class="dt">colour=</span><span class="st">&quot;red&quot;</span>)<span class="op">+</span>
+<span class="st">  </span><span class="kw">labs</span>(<span class="dt">x=</span><span class="st">&quot;&quot;</span>,<span class="dt">y=</span><span class="st">&quot;&quot;</span>)<span class="op">+</span>
+<span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Total Number of Collisions for each hour in London from 2006 to 2017&quot;</span>)<span class="op">+</span>
+<span class="st">  </span><span class="kw">scale_x_continuous</span>(<span class="dt">limits=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">23</span>),
+                     <span class="dt">breaks=</span> <span class="kw">seq</span>(<span class="dv">0</span>,<span class="dv">23</span>,<span class="dv">2</span>),
+                     <span class="dt">labels=</span><span class="kw">c</span>(<span class="st">&quot;12 am&quot;</span>,
+                              <span class="kw">paste</span>(<span class="kw">seq</span>(<span class="dv">2</span>,<span class="dv">10</span>,<span class="dv">2</span>),<span class="st">&quot;am&quot;</span>),
+                              <span class="st">&quot;12 pm&quot;</span>,
+                              <span class="kw">paste</span>(<span class="kw">seq</span>(<span class="dv">14</span>,<span class="dv">22</span>,<span class="dv">2</span>)<span class="op">-</span><span class="dv">12</span>,<span class="st">&quot;pm&quot;</span>)))<span class="op">+</span>
+<span class="st">  </span><span class="kw">theme_bw</span>()<span class="op">+</span>
+<span class="st">  </span><span class="kw">theme</span>(<span class="dt">rect=</span><span class="kw">element_blank</span>(),
+        <span class="dt">panel.grid=</span><span class="kw">element_blank</span>(),
+        <span class="dt">axis.title.y=</span><span class="kw">element_blank</span>(),
+        <span class="dt">axis.text.y=</span><span class="kw">element_blank</span>(), 
+        <span class="dt">axis.ticks.y=</span><span class="kw">element_blank</span>(),
+        <span class="dt">axis.text.x =</span> <span class="kw">element_text</span>(<span class="dt">angle =</span> <span class="dv">30</span>, <span class="dt">hjust =</span> <span class="dv">1</span>))
+
+<span class="kw">ggplotly</span>(p_hour) <span class="co">#One more step beyong ggplot to make it interactive</span></code></pre>
+<div id="htmlwidget-9055d9f530b785edf588" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-9055d9f530b785edf588">{"x":{"data":[{"x":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23],"y":[10,7,2,7,3,4,22,59,70,56,34,73,68,82,100,121,163,173,105,56,65,31,32,15],"text":["hour:  0<br />Count:  10","hour:  1<br />Count:   7","hour:  2<br />Count:   2","hour:  3<br />Count:   7","hour:  4<br />Count:   3","hour:  5<br />Count:   4","hour:  6<br />Count:  22","hour:  7<br />Count:  59","hour:  8<br />Count:  70","hour:  9<br />Count:  56","hour: 10<br />Count:  34","hour: 11<br />Count:  73","hour: 12<br />Count:  68","hour: 13<br />Count:  82","hour: 14<br />Count: 100","hour: 15<br />Count: 121","hour: 16<br />Count: 163","hour: 17<br />Count: 173","hour: 18<br />Count: 105","hour: 19<br />Count:  56","hour: 20<br />Count:  65","hour: 21<br />Count:  31","hour: 22<br />Count:  32","hour: 23<br />Count:  15"],"type":"scatter","mode":"markers+lines","marker":{"autocolorscale":false,"color":"rgba(255,0,0,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(255,0,0,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","line":{"width":1.88976377952756,"color":"rgba(255,0,0,1)","dash":"solid"},"frame":null}],"layout":{"margin":{"t":43.7625570776256,"r":7.30593607305936,"b":25.5707762557078,"l":10.958904109589},"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"title":{"text":"Total Number of Collisions for each hour in London from 2006 to 2017","font":{"color":"rgba(0,0,0,1)","family":"","size":17.5342465753425},"x":0,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-1.15,24.15],"tickmode":"array","ticktext":["12 am","2 am","4 am","6 am","8 am","10 am","12 pm","2 pm","4 pm","6 pm","8 pm","10 pm"],"tickvals":[0,2,4,6,8,10,12,14,16,18,20,22],"categoryorder":"array","categoryarray":["12 am","2 am","4 am","6 am","8 am","10 am","12 pm","2 pm","4 pm","6 pm","8 pm","10 pm"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-30,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-6.55,181.55],"tickmode":"array","ticktext":["0","50","100","150"],"tickvals":[0,50,100,150],"categoryorder":"array","categoryarray":["0","50","100","150"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":false,"tickfont":{"color":null,"family":null,"size":0},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"","font":{"color":null,"family":null,"size":0}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false},"source":"A","attrs":{"3724de6250b":{"x":{},"y":{},"type":"scatter"},"372475a1573f":{"x":{},"y":{}}},"cur_data":"3724de6250b","visdat":{"3724de6250b":["function (y) ","x"],"372475a1573f":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co">#Filter out weekends and adults</span>
+<span class="co"># !is_kid means not a kid</span>
+collision_hour1 &lt;-<span class="st"> </span>collision <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">filter</span>(weekend,<span class="op">!</span>is_kid) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">group_by</span>(hour) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">summarise</span>(<span class="dt">Count=</span><span class="kw">n</span>())
+
+<span class="co">#Filter out weekends and kids</span>
+collision_hour2 &lt;-<span class="st"> </span>collision <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">filter</span>(weekend,is_kid) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">group_by</span>(hour) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">summarise</span>(<span class="dt">Count=</span><span class="kw">n</span>())
+
+
+collision_hour12 &lt;-<span class="st"> </span><span class="kw">rbind</span>(collision_hour1,collision_hour2) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">AgeGroup=</span><span class="kw">c</span>(<span class="kw">rep</span>(<span class="st">&quot;adult&quot;</span>,<span class="kw">nrow</span>(collision_hour1)),
+                    <span class="kw">rep</span>(<span class="st">&quot;kid&quot;</span>,<span class="kw">nrow</span>(collision_hour2))))
+
+p_hour2 &lt;-<span class="st"> </span>collision_hour12 <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> hour, <span class="dt">y=</span>Count,<span class="dt">color=</span>AgeGroup))<span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_point</span>()<span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_line</span>()<span class="op">+</span>
+<span class="st">  </span><span class="co">#facet_wrap(~AgeGroup)+</span>
+<span class="st">  </span><span class="kw">labs</span>(<span class="dt">x=</span><span class="st">&quot;hour&quot;</span>,<span class="dt">y=</span><span class="st">&quot;Count&quot;</span>)<span class="op">+</span>
+<span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Total Number of Collisions for each hour (weekend) in London from 2006 to 2017&quot;</span>)<span class="op">+</span>
+<span class="st">  </span><span class="kw">scale_x_continuous</span>(<span class="dt">limits=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">23</span>),
+                     <span class="dt">breaks=</span> <span class="kw">seq</span>(<span class="dv">0</span>,<span class="dv">23</span>,<span class="dv">3</span>),
+                     <span class="dt">labels=</span><span class="kw">c</span>(<span class="st">&quot;12 am&quot;</span>,
+                              <span class="kw">paste</span>(<span class="kw">seq</span>(<span class="dv">3</span>,<span class="dv">9</span>,<span class="dv">3</span>),<span class="st">&quot;am&quot;</span>),
+                              <span class="st">&quot;12 pm&quot;</span>,
+                              <span class="kw">paste</span>(<span class="kw">seq</span>(<span class="dv">15</span>,<span class="dv">21</span>,<span class="dv">3</span>)<span class="op">-</span><span class="dv">12</span>,<span class="st">&quot;pm&quot;</span>)))<span class="op">+</span>
+<span class="st">  </span><span class="kw">ylim</span>(<span class="dv">0</span>, <span class="dv">30</span>)
+
+<span class="kw">ggplotly</span>(p_hour2) <span class="co">#One more step beyong ggplot to make it interactive</span></code></pre>
+<div id="htmlwidget-5189ca086ce712d99175" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-5189ca086ce712d99175">{"x":{"data":[{"x":[0,1,2,3,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23],"y":[6,5,4,1,1,1,1,6,15,11,17,11,18,17,20,14,18,9,6,7,5,6,5],"text":["hour:  0<br />Count:  6<br />AgeGroup: adult","hour:  1<br />Count:  5<br />AgeGroup: adult","hour:  2<br />Count:  4<br />AgeGroup: adult","hour:  3<br />Count:  1<br />AgeGroup: adult","hour:  5<br />Count:  1<br />AgeGroup: adult","hour:  6<br />Count:  1<br />AgeGroup: adult","hour:  7<br />Count:  1<br />AgeGroup: adult","hour:  8<br />Count:  6<br />AgeGroup: adult","hour:  9<br />Count: 15<br />AgeGroup: adult","hour: 10<br />Count: 11<br />AgeGroup: adult","hour: 11<br />Count: 17<br />AgeGroup: adult","hour: 12<br />Count: 11<br />AgeGroup: adult","hour: 13<br />Count: 18<br />AgeGroup: adult","hour: 14<br />Count: 17<br />AgeGroup: adult","hour: 15<br />Count: 20<br />AgeGroup: adult","hour: 16<br />Count: 14<br />AgeGroup: adult","hour: 17<br />Count: 18<br />AgeGroup: adult","hour: 18<br />Count:  9<br />AgeGroup: adult","hour: 19<br />Count:  6<br />AgeGroup: adult","hour: 20<br />Count:  7<br />AgeGroup: adult","hour: 21<br />Count:  5<br />AgeGroup: adult","hour: 22<br />Count:  6<br />AgeGroup: adult","hour: 23<br />Count:  5<br />AgeGroup: adult"],"type":"scatter","mode":"markers+lines","marker":{"autocolorscale":false,"color":"rgba(248,118,109,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(248,118,109,1)"}},"hoveron":"points","name":"adult","legendgroup":"adult","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","line":{"width":1.88976377952756,"color":"rgba(248,118,109,1)","dash":"solid"},"frame":null},{"x":[0,10,11,12,13,14,15,16,17,18,19,20,21,22,23],"y":[1,5,4,3,3,4,7,4,3,7,4,2,3,2,1],"text":["hour:  0<br />Count:  1<br />AgeGroup: kid","hour: 10<br />Count:  5<br />AgeGroup: kid","hour: 11<br />Count:  4<br />AgeGroup: kid","hour: 12<br />Count:  3<br />AgeGroup: kid","hour: 13<br />Count:  3<br />AgeGroup: kid","hour: 14<br />Count:  4<br />AgeGroup: kid","hour: 15<br />Count:  7<br />AgeGroup: kid","hour: 16<br />Count:  4<br />AgeGroup: kid","hour: 17<br />Count:  3<br />AgeGroup: kid","hour: 18<br />Count:  7<br />AgeGroup: kid","hour: 19<br />Count:  4<br />AgeGroup: kid","hour: 20<br />Count:  2<br />AgeGroup: kid","hour: 21<br />Count:  3<br />AgeGroup: kid","hour: 22<br />Count:  2<br />AgeGroup: kid","hour: 23<br />Count:  1<br />AgeGroup: kid"],"type":"scatter","mode":"markers+lines","marker":{"autocolorscale":false,"color":"rgba(0,191,196,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(0,191,196,1)"}},"hoveron":"points","name":"kid","legendgroup":"kid","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","line":{"width":1.88976377952756,"color":"rgba(0,191,196,1)","dash":"solid"},"frame":null}],"layout":{"margin":{"t":43.7625570776256,"r":7.30593607305936,"b":40.1826484018265,"l":37.2602739726027},"plot_bgcolor":"rgba(235,235,235,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"title":{"text":"Total Number of Collisions for each hour (weekend) in London from 2006 to 2017","font":{"color":"rgba(0,0,0,1)","family":"","size":17.5342465753425},"x":0,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-1.15,24.15],"tickmode":"array","ticktext":["12 am","3 am","6 am","9 am","12 pm","3 pm","6 pm","9 pm"],"tickvals":[0,3,6,9,12,15,18,21],"categoryorder":"array","categoryarray":["12 am","3 am","6 am","9 am","12 pm","3 pm","6 pm","9 pm"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"y","title":{"text":"hour","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-1.5,31.5],"tickmode":"array","ticktext":["0","10","20","30"],"tickvals":[0,10,20,30],"categoryorder":"array","categoryarray":["0","10","20","30"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"x","title":{"text":"Count","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.88976377952756,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895},"y":0.96751968503937},"annotations":[{"text":"AgeGroup","x":1.02,"y":1,"showarrow":false,"ax":0,"ay":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xref":"paper","yref":"paper","textangle":-0,"xanchor":"left","yanchor":"bottom","legendTitle":true}],"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false},"source":"A","attrs":{"372461c73393":{"x":{},"y":{},"colour":{},"type":"scatter"},"3724356461d3":{"x":{},"y":{},"colour":{}}},"cur_data":"372461c73393","visdat":{"372461c73393":["function (y) ","x"],"3724356461d3":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co">#Filter out weekends and adults</span>
+<span class="co"># !is_kid means not a kid</span>
+collision_hour1 &lt;-<span class="st"> </span>collision <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">filter</span>(<span class="op">!</span>weekend,<span class="op">!</span>is_kid) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">group_by</span>(hour) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">summarise</span>(<span class="dt">Count=</span><span class="kw">n</span>())
+
+<span class="co">#Filter out weekends and kids</span>
+collision_hour2 &lt;-<span class="st"> </span>collision <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">filter</span>(<span class="op">!</span>weekend,is_kid) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">group_by</span>(hour) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">summarise</span>(<span class="dt">Count=</span><span class="kw">n</span>())
+
+
+collision_hour12 &lt;-<span class="st"> </span><span class="kw">rbind</span>(collision_hour1,collision_hour2) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">AgeGroup=</span><span class="kw">c</span>(<span class="kw">rep</span>(<span class="st">&quot;adult&quot;</span>,<span class="kw">nrow</span>(collision_hour1)),
+                    <span class="kw">rep</span>(<span class="st">&quot;kid&quot;</span>,<span class="kw">nrow</span>(collision_hour2))))
+
+p_hour2 &lt;-<span class="st"> </span>collision_hour12 <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> hour, <span class="dt">y=</span>Count,<span class="dt">color=</span>AgeGroup))<span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_point</span>()<span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_line</span>()<span class="op">+</span>
+<span class="st">  </span><span class="co">#facet_wrap(~AgeGroup)+</span>
+<span class="st">  </span><span class="kw">labs</span>(<span class="dt">x=</span><span class="st">&quot;hour&quot;</span>,<span class="dt">y=</span><span class="st">&quot;Count&quot;</span>)<span class="op">+</span>
+<span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Total Number of Collisions for each hour (weekday) in London from 2006 to 2017&quot;</span>)<span class="op">+</span>
+<span class="st">  </span><span class="kw">scale_x_continuous</span>(<span class="dt">limits=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">23</span>),
+                     <span class="dt">breaks=</span> <span class="kw">seq</span>(<span class="dv">0</span>,<span class="dv">23</span>,<span class="dv">3</span>),
+                     <span class="dt">labels=</span><span class="kw">c</span>(<span class="st">&quot;12 am&quot;</span>,
+                              <span class="kw">paste</span>(<span class="kw">seq</span>(<span class="dv">3</span>,<span class="dv">9</span>,<span class="dv">3</span>),<span class="st">&quot;am&quot;</span>),
+                              <span class="st">&quot;12 pm&quot;</span>,
+                              <span class="kw">paste</span>(<span class="kw">seq</span>(<span class="dv">15</span>,<span class="dv">21</span>,<span class="dv">3</span>)<span class="op">-</span><span class="dv">12</span>,<span class="st">&quot;pm&quot;</span>)))<span class="op">+</span>
+<span class="st">  </span><span class="kw">ylim</span>(<span class="dv">0</span>, <span class="kw">max</span>(collision_hour1<span class="op">$</span>Count))
+
+<span class="kw">ggplotly</span>(p_hour2) <span class="co">#One more step beyong ggplot to make it interactive</span></code></pre>
+<div id="htmlwidget-aeab7dcaa3929768d8e0" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-aeab7dcaa3929768d8e0">{"x":{"data":[{"x":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23],"y":[9,5,1,7,2,3,18,40,44,43,22,52,41,56,75,80,104,110,62,33,42,22,22,8],"text":["hour:  0<br />Count:   9<br />AgeGroup: adult","hour:  1<br />Count:   5<br />AgeGroup: adult","hour:  2<br />Count:   1<br />AgeGroup: adult","hour:  3<br />Count:   7<br />AgeGroup: adult","hour:  4<br />Count:   2<br />AgeGroup: adult","hour:  5<br />Count:   3<br />AgeGroup: adult","hour:  6<br />Count:  18<br />AgeGroup: adult","hour:  7<br />Count:  40<br />AgeGroup: adult","hour:  8<br />Count:  44<br />AgeGroup: adult","hour:  9<br />Count:  43<br />AgeGroup: adult","hour: 10<br />Count:  22<br />AgeGroup: adult","hour: 11<br />Count:  52<br />AgeGroup: adult","hour: 12<br />Count:  41<br />AgeGroup: adult","hour: 13<br />Count:  56<br />AgeGroup: adult","hour: 14<br />Count:  75<br />AgeGroup: adult","hour: 15<br />Count:  80<br />AgeGroup: adult","hour: 16<br />Count: 104<br />AgeGroup: adult","hour: 17<br />Count: 110<br />AgeGroup: adult","hour: 18<br />Count:  62<br />AgeGroup: adult","hour: 19<br />Count:  33<br />AgeGroup: adult","hour: 20<br />Count:  42<br />AgeGroup: adult","hour: 21<br />Count:  22<br />AgeGroup: adult","hour: 22<br />Count:  22<br />AgeGroup: adult","hour: 23<br />Count:   8<br />AgeGroup: adult"],"type":"scatter","mode":"markers+lines","marker":{"autocolorscale":false,"color":"rgba(248,118,109,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(248,118,109,1)"}},"hoveron":"points","name":"adult","legendgroup":"adult","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","line":{"width":1.88976377952756,"color":"rgba(248,118,109,1)","dash":"solid"},"frame":null},{"x":[1,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22],"y":[1,1,1,13,14,5,5,7,11,13,8,21,28,39,26,11,14,6,4],"text":["hour:  1<br />Count:   1<br />AgeGroup: kid","hour:  5<br />Count:   1<br />AgeGroup: kid","hour:  6<br />Count:   1<br />AgeGroup: kid","hour:  7<br />Count:  13<br />AgeGroup: kid","hour:  8<br />Count:  14<br />AgeGroup: kid","hour:  9<br />Count:   5<br />AgeGroup: kid","hour: 10<br />Count:   5<br />AgeGroup: kid","hour: 11<br />Count:   7<br />AgeGroup: kid","hour: 12<br />Count:  11<br />AgeGroup: kid","hour: 13<br />Count:  13<br />AgeGroup: kid","hour: 14<br />Count:   8<br />AgeGroup: kid","hour: 15<br />Count:  21<br />AgeGroup: kid","hour: 16<br />Count:  28<br />AgeGroup: kid","hour: 17<br />Count:  39<br />AgeGroup: kid","hour: 18<br />Count:  26<br />AgeGroup: kid","hour: 19<br />Count:  11<br />AgeGroup: kid","hour: 20<br />Count:  14<br />AgeGroup: kid","hour: 21<br />Count:   6<br />AgeGroup: kid","hour: 22<br />Count:   4<br />AgeGroup: kid"],"type":"scatter","mode":"markers+lines","marker":{"autocolorscale":false,"color":"rgba(0,191,196,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(0,191,196,1)"}},"hoveron":"points","name":"kid","legendgroup":"kid","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","line":{"width":1.88976377952756,"color":"rgba(0,191,196,1)","dash":"solid"},"frame":null}],"layout":{"margin":{"t":43.7625570776256,"r":7.30593607305936,"b":40.1826484018265,"l":37.2602739726027},"plot_bgcolor":"rgba(235,235,235,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"title":{"text":"Total Number of Collisions for each hour (weekday) in London from 2006 to 2017","font":{"color":"rgba(0,0,0,1)","family":"","size":17.5342465753425},"x":0,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-1.15,24.15],"tickmode":"array","ticktext":["12 am","3 am","6 am","9 am","12 pm","3 pm","6 pm","9 pm"],"tickvals":[0,3,6,9,12,15,18,21],"categoryorder":"array","categoryarray":["12 am","3 am","6 am","9 am","12 pm","3 pm","6 pm","9 pm"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"y","title":{"text":"hour","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-5.5,115.5],"tickmode":"array","ticktext":["0","30","60","90"],"tickvals":[0,30,60,90],"categoryorder":"array","categoryarray":["0","30","60","90"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"x","title":{"text":"Count","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.88976377952756,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895},"y":0.96751968503937},"annotations":[{"text":"AgeGroup","x":1.02,"y":1,"showarrow":false,"ax":0,"ay":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xref":"paper","yref":"paper","textangle":-0,"xanchor":"left","yanchor":"bottom","legendTitle":true}],"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false},"source":"A","attrs":{"37247fc133da":{"x":{},"y":{},"colour":{},"type":"scatter"},"37246f2a1d16":{"x":{},"y":{},"colour":{}}},"cur_data":"37247fc133da","visdat":{"37247fc133da":["function (y) ","x"],"37246f2a1d16":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="general-information.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="location-effect.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": null,
+"history": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection",
+"scroll_highlight": true
+},
+"toolbar": {
+"position": "fixed"
+},
+"search": false
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>5 Model for the Number of Collision | Cycling Collisions in London</title>
+  <meta name="description" content="5 Model for the Number of Collision | Cycling Collisions in London" />
+  <meta name="generator" content="bookdown 0.10 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="5 Model for the Number of Collision | Cycling Collisions in London" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="5 Model for the Number of Collision | Cycling Collisions in London" />
+  
+  
+  
+
+<meta name="author" content="Rebecca Henderson" />
+
+
+<meta name="date" content="2019-05-01" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="location-effect.html">
+<link rel="next" href="model-for-injury-level-of-collision.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+<script src="libs/htmlwidgets-1.3/htmlwidgets.js"></script>
+<link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="libs/datatables-binding-0.5/datatables.js"></script>
+<link href="libs/dt-core-1.10.16/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="libs/dt-core-1.10.16/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="libs/dt-core-1.10.16/js/jquery.dataTables.min.js"></script>
+<link href="libs/crosstalk-1.0.0/css/crosstalk.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.0.0/js/crosstalk.min.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<script src="libs/plotly-binding-4.9.0/plotly.js"></script>
+<script src="libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="libs/plotly-htmlwidgets-css-1.46.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotly-main-1.46.1/plotly-latest.min.js"></script>
+<link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
+<script src="libs/leaflet-1.3.1/leaflet.js"></script>
+<link href="libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+<script src="libs/Proj4Leaflet-1.0.1/proj4-compressed.js"></script>
+<script src="libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+<link href="libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
+<script src="libs/leaflet-binding-2.0.2/leaflet.js"></script>
+<link href="libs/leaflet-markercluster-1.0.5/MarkerCluster.css" rel="stylesheet" />
+<link href="libs/leaflet-markercluster-1.0.5/MarkerCluster.Default.css" rel="stylesheet" />
+<script src="libs/leaflet-markercluster-1.0.5/leaflet.markercluster.js"></script>
+<script src="libs/leaflet-markercluster-1.0.5/leaflet.markercluster.freezable.js"></script>
+<script src="libs/leaflet-markercluster-1.0.5/leaflet.markercluster.layersupport.js"></script>
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="preparations.html"><a href="preparations.html"><i class="fa fa-check"></i><b>1</b> Preparations</a><ul>
+<li class="chapter" data-level="1.1" data-path="preparations.html"><a href="preparations.html#load-libraries"><i class="fa fa-check"></i><b>1.1</b> Load libraries</a></li>
+<li class="chapter" data-level="1.2" data-path="preparations.html"><a href="preparations.html#read-data"><i class="fa fa-check"></i><b>1.2</b> Read data</a></li>
+<li class="chapter" data-level="1.3" data-path="preparations.html"><a href="preparations.html#data-structure"><i class="fa fa-check"></i><b>1.3</b> Data structure</a></li>
+<li class="chapter" data-level="1.4" data-path="preparations.html"><a href="preparations.html#view"><i class="fa fa-check"></i><b>1.4</b> View</a></li>
+<li class="chapter" data-level="1.5" data-path="preparations.html"><a href="preparations.html#missing-rate-and-unique-values"><i class="fa fa-check"></i><b>1.5</b> Missing rate and unique values</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="general-information.html"><a href="general-information.html"><i class="fa fa-check"></i><b>2</b> General Information</a><ul>
+<li class="chapter" data-level="2.1" data-path="general-information.html"><a href="general-information.html#walking"><i class="fa fa-check"></i><b>2.1</b> Walking</a></li>
+<li class="chapter" data-level="2.2" data-path="general-information.html"><a href="general-information.html#charge"><i class="fa fa-check"></i><b>2.2</b> Charge</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="general-information.html"><a href="general-information.html#number-of-charges-for-adults"><i class="fa fa-check"></i><b>2.2.1</b> Number of charges for adults</a></li>
+<li class="chapter" data-level="2.2.2" data-path="general-information.html"><a href="general-information.html#number-of-adults-involved-in-cyclist-charges"><i class="fa fa-check"></i><b>2.2.2</b> Number of adults involved in cyclist charges</a></li>
+<li class="chapter" data-level="2.2.3" data-path="general-information.html"><a href="general-information.html#charge-of-cyclists-vs-rain"><i class="fa fa-check"></i><b>2.2.3</b> Charge of cyclists vs rain</a></li>
+<li class="chapter" data-level="2.2.4" data-path="general-information.html"><a href="general-information.html#charge-of-drivers-vs-rain"><i class="fa fa-check"></i><b>2.2.4</b> Charge of drivers vs rain</a></li>
+<li class="chapter" data-level="2.2.5" data-path="general-information.html"><a href="general-information.html#charge-of-drivers-vs-walking"><i class="fa fa-check"></i><b>2.2.5</b> Charge of drivers vs walking</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="general-information.html"><a href="general-information.html#fault"><i class="fa fa-check"></i><b>2.3</b> fault</a></li>
+<li class="chapter" data-level="2.4" data-path="general-information.html"><a href="general-information.html#enviorment"><i class="fa fa-check"></i><b>2.4</b> Enviorment</a></li>
+<li class="chapter" data-level="2.5" data-path="general-information.html"><a href="general-information.html#manoeuver"><i class="fa fa-check"></i><b>2.5</b> Manoeuver</a></li>
+<li class="chapter" data-level="2.6" data-path="general-information.html"><a href="general-information.html#injurythree"><i class="fa fa-check"></i><b>2.6</b> injuryThree</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="time-effect.html"><a href="time-effect.html"><i class="fa fa-check"></i><b>3</b> Time Effect</a><ul>
+<li class="chapter" data-level="3.1" data-path="time-effect.html"><a href="time-effect.html#time-factor"><i class="fa fa-check"></i><b>3.1</b> Time factor</a></li>
+<li class="chapter" data-level="3.2" data-path="time-effect.html"><a href="time-effect.html#monthly-aggregation-for-each-year"><i class="fa fa-check"></i><b>3.2</b> Monthly aggregation for each year</a></li>
+<li class="chapter" data-level="3.3" data-path="time-effect.html"><a href="time-effect.html#yearly-aggregation"><i class="fa fa-check"></i><b>3.3</b> Yearly aggregation</a></li>
+<li class="chapter" data-level="3.4" data-path="time-effect.html"><a href="time-effect.html#monthly-aggregation"><i class="fa fa-check"></i><b>3.4</b> Monthly aggregation</a></li>
+<li class="chapter" data-level="3.5" data-path="time-effect.html"><a href="time-effect.html#rush-hour"><i class="fa fa-check"></i><b>3.5</b> Rush hour</a></li>
+<li class="chapter" data-level="3.6" data-path="time-effect.html"><a href="time-effect.html#day-aggregation"><i class="fa fa-check"></i><b>3.6</b> Day aggregation</a></li>
+<li class="chapter" data-level="3.7" data-path="time-effect.html"><a href="time-effect.html#hour-aggregation"><i class="fa fa-check"></i><b>3.7</b> Hour aggregation</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="location-effect.html"><a href="location-effect.html"><i class="fa fa-check"></i><b>4</b> Location Effect</a><ul>
+<li class="chapter" data-level="4.1" data-path="location-effect.html"><a href="location-effect.html#get-map"><i class="fa fa-check"></i><b>4.1</b> GET MAP</a></li>
+<li class="chapter" data-level="4.2" data-path="location-effect.html"><a href="location-effect.html#scatterplot"><i class="fa fa-check"></i><b>4.2</b> Scatterplot</a></li>
+<li class="chapter" data-level="4.3" data-path="location-effect.html"><a href="location-effect.html#heatmap"><i class="fa fa-check"></i><b>4.3</b> Heatmap</a></li>
+<li class="chapter" data-level="4.4" data-path="location-effect.html"><a href="location-effect.html#count-by-location"><i class="fa fa-check"></i><b>4.4</b> Count by location</a></li>
+<li class="chapter" data-level="4.5" data-path="location-effect.html"><a href="location-effect.html#count-by-neigbourhood"><i class="fa fa-check"></i><b>4.5</b> Count by Neigbourhood</a></li>
+<li class="chapter" data-level="4.6" data-path="location-effect.html"><a href="location-effect.html#interactive-map-with-injury-label"><i class="fa fa-check"></i><b>4.6</b> Interactive map with injury label</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="model-for-the-number-of-collision.html"><a href="model-for-the-number-of-collision.html"><i class="fa fa-check"></i><b>5</b> Model for the Number of Collision</a><ul>
+<li class="chapter" data-level="5.1" data-path="model-for-the-number-of-collision.html"><a href="model-for-the-number-of-collision.html#grouped-by-location-and-year"><i class="fa fa-check"></i><b>5.1</b> Grouped by location and year</a></li>
+<li class="chapter" data-level="5.2" data-path="model-for-the-number-of-collision.html"><a href="model-for-the-number-of-collision.html#poisson-model"><i class="fa fa-check"></i><b>5.2</b> Poisson model</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="model-for-injury-level-of-collision.html"><a href="model-for-injury-level-of-collision.html"><i class="fa fa-check"></i><b>6</b> Model for Injury Level of Collision</a><ul>
+<li class="chapter" data-level="6.1" data-path="model-for-injury-level-of-collision.html"><a href="model-for-injury-level-of-collision.html#baseline-for-categorical-variables"><i class="fa fa-check"></i><b>6.1</b> Baseline for categorical variables</a></li>
+<li class="chapter" data-level="6.2" data-path="model-for-injury-level-of-collision.html"><a href="model-for-injury-level-of-collision.html#multinominal-model"><i class="fa fa-check"></i><b>6.2</b> Multinominal model</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Cycling Collisions in London</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="model-for-the-number-of-collision" class="section level1 tabset tabset-fade">
+<h1><span class="header-section-number">5</span> Model for the Number of Collision</h1>
+<div id="grouped-by-location-and-year" class="section level2">
+<h2><span class="header-section-number">5.1</span> Grouped by location and year</h2>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co">#----------------- Aggregated by Location index and year ---------------------------#</span>
+collisionSub &lt;-<span class="st"> </span>collision <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span>dplyr<span class="op">::</span><span class="kw">select</span>(date,
+         lat, lon,locationType,
+         R1new, R2new,
+         numR1new, numR2new, 
+         locationIndex,
+         wday, month, year,
+         yearmonthday,yearmonth, weekend, 
+         hour,rushhour,postal,neighborhood)
+
+<span class="co">#</span>
+collision_location &lt;-<span class="st"> </span>collisionSub <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">group_by</span>(locationIndex) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">summarise</span>(<span class="dt">count=</span><span class="kw">n</span>(), 
+            <span class="dt">Latitude =</span> <span class="kw">mean</span>(lat,<span class="dt">na.rm =</span> <span class="ot">TRUE</span>), <span class="dt">Longitude=</span><span class="kw">mean</span>(lon,<span class="dt">na.rm =</span> <span class="ot">TRUE</span>),
+            <span class="dt">locationType =</span> <span class="kw">Mode</span>(locationType,<span class="dt">na.rm =</span> <span class="ot">TRUE</span>)[<span class="dv">1</span>],
+            <span class="dt">R1new =</span> <span class="kw">Mode</span>(R1new,<span class="dt">na.rm =</span> <span class="ot">TRUE</span>)[<span class="dv">1</span>],
+            <span class="dt">R2new =</span> <span class="kw">Mode</span>(R2new,<span class="dt">na.rm =</span> <span class="ot">TRUE</span>)[<span class="dv">1</span>],
+            <span class="dt">numR1new =</span> <span class="kw">Mode</span>(numR1new,<span class="dt">na.rm =</span> <span class="ot">TRUE</span>)[<span class="dv">1</span>],
+            <span class="dt">numR2new =</span> <span class="kw">Mode</span>(numR2new,<span class="dt">na.rm =</span> <span class="ot">TRUE</span>)[<span class="dv">1</span>],
+            <span class="dt">postal =</span> <span class="kw">Mode</span>(postal,<span class="dt">na.rm =</span> <span class="ot">TRUE</span>)[<span class="dv">1</span>],
+            <span class="dt">neighborhood =</span> <span class="kw">Mode</span>(neighborhood,<span class="dt">na.rm =</span> <span class="ot">TRUE</span>)[<span class="dv">1</span>]) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">ungroup</span>()
+
+
+<span class="co">#</span>
+collision_location_year &lt;-<span class="st"> </span>collisionSub <span class="op">%&gt;%</span>
+<span class="st">  </span>dplyr<span class="op">::</span><span class="kw">select</span>(locationIndex,year) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">group_by</span>(locationIndex,year) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">summarise</span>(<span class="dt">countYear=</span><span class="kw">n</span>()) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">ungroup</span>()
+
+
+<span class="co">#Fill zeros</span>
+<span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="kw">max</span>(collision_location_year<span class="op">$</span>locationIndex)){
+  occurYear &lt;-<span class="st"> </span>collision_location_year<span class="op">$</span>year[collision_location_year<span class="op">$</span>locationIndex<span class="op">==</span>i]
+  missYear &lt;-<span class="st"> </span><span class="kw">setdiff</span>(<span class="dv">2006</span><span class="op">:</span><span class="dv">2017</span>,occurYear)
+  <span class="cf">if</span>(<span class="kw">length</span>(missYear)<span class="op">&gt;</span><span class="dv">0</span>){
+    addzero &lt;-<span class="st"> </span>collision_location[i,][<span class="kw">rep</span>(<span class="dv">1</span>,<span class="kw">length</span>(missYear)),<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>)]
+    addzero<span class="op">$</span>year &lt;-<span class="st"> </span>missYear
+    <span class="kw">colnames</span>(addzero)[<span class="dv">2</span>] &lt;-<span class="st"> &quot;countYear&quot;</span>
+    addzero<span class="op">$</span>countYear &lt;-<span class="st"> </span><span class="dv">0</span>
+    collision_location_year &lt;-<span class="st"> </span>collision_location_year <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">bind_rows</span>(addzero)
+  }
+}
+
+collision_location_year &lt;-<span class="st"> </span>collision_location_year <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">arrange</span>(locationIndex,year) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">left_join</span>(collision_location[,<span class="op">-</span><span class="dv">2</span>],<span class="dt">by =</span> <span class="st">&quot;locationIndex&quot;</span>)
+
+
+<span class="kw">cat</span>(<span class="st">&quot;Structure of the aggregated data by loacation and year:</span><span class="ch">\n</span><span class="st">&quot;</span>)</code></pre>
+<pre><code>## Structure of the aggregated data by loacation and year:</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">glimpse</span>(collision_location_year)</code></pre>
+<pre><code>## Observations: 11,016
+## Variables: 12
+## $ locationIndex &lt;int&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, ...
+## $ year          &lt;int&gt; 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, ...
+## $ countYear     &lt;dbl&gt; 3, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, ...
+## $ Latitude      &lt;dbl&gt; 42.95418, 42.95418, 42.95418, 42.95418, 42.95418...
+## $ Longitude     &lt;dbl&gt; -81.29062, -81.29062, -81.29062, -81.29062, -81....
+## $ locationType  &lt;chr&gt; &quot;intersection&quot;, &quot;intersection&quot;, &quot;intersection&quot;, ...
+## $ R1new         &lt;chr&gt; &quot;COMMISSIONERS RD W&quot;, &quot;COMMISSIONERS RD W&quot;, &quot;COM...
+## $ R2new         &lt;chr&gt; &quot;WONDERLAND RD S&quot;, &quot;WONDERLAND RD S&quot;, &quot;WONDERLAN...
+## $ numR1new      &lt;int&gt; 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 2, 2, 2, 2, ...
+## $ numR2new      &lt;int&gt; 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, ...
+## $ postal        &lt;chr&gt; &quot;N6K 2Y8&quot;, &quot;N6K 2Y8&quot;, &quot;N6K 2Y8&quot;, &quot;N6K 2Y8&quot;, &quot;N6K...
+## $ neighborhood  &lt;chr&gt; &quot;Southcrest&quot;, &quot;Southcrest&quot;, &quot;Southcrest&quot;, &quot;South...</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Set the baseline for factor</span>
+collision_location_year<span class="op">$</span>locationType &lt;-<span class="st"> </span><span class="kw">factor</span>(collision_location_year<span class="op">$</span>locationType)
+<span class="kw">dim</span>(collision_location_year)</code></pre>
+<pre><code>## [1] 11016    12</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">cat</span>(<span class="st">&quot;Missing rate for each variable:</span><span class="ch">\n</span><span class="st">&quot;</span>)</code></pre>
+<pre><code>## Missing rate for each variable:</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">missing_rate &lt;-<span class="st"> </span><span class="kw">apply</span>(collision_location_year,<span class="dv">2</span>,<span class="dt">FUN =</span> <span class="cf">function</span>(x){<span class="kw">mean</span>(<span class="kw">is.na</span>(x))})
+UN &lt;-<span class="st"> </span><span class="kw">apply</span>(collision_location_year,<span class="dv">2</span>,<span class="dt">FUN =</span> <span class="cf">function</span>(x){<span class="kw">length</span>(<span class="kw">unique</span>(x))})
+colclass &lt;-<span class="st"> </span>collision_location_year <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">summarise_all</span>(<span class="cf">function</span>(x)<span class="kw">class</span>(x)[<span class="dv">1</span>]) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">as.matrix</span>() <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">t</span>()
+missing_rate &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">variable=</span><span class="kw">names</span>(missing_rate),
+                           <span class="dt">type=</span>colclass,
+                           <span class="dt">missing_rate=</span>missing_rate,
+                           <span class="dt">uniqueNum=</span>UN)
+<span class="kw">kable</span>(missing_rate,<span class="dt">row.names =</span> <span class="ot">FALSE</span>,<span class="dt">align=</span><span class="kw">c</span>(<span class="st">&#39;c&#39;</span>,<span class="st">&#39;c&#39;</span>,<span class="st">&#39;c&#39;</span>)) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">kable_styling</span>(<span class="dt">full_width =</span> F)</code></pre>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:center;">
+variable
+</th>
+<th style="text-align:center;">
+type
+</th>
+<th style="text-align:center;">
+missing_rate
+</th>
+<th style="text-align:center;">
+uniqueNum
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;">
+locationIndex
+</td>
+<td style="text-align:center;">
+integer
+</td>
+<td style="text-align:center;">
+0.0000000
+</td>
+<td style="text-align:center;">
+918
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+year
+</td>
+<td style="text-align:center;">
+integer
+</td>
+<td style="text-align:center;">
+0.0000000
+</td>
+<td style="text-align:center;">
+12
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+countYear
+</td>
+<td style="text-align:center;">
+numeric
+</td>
+<td style="text-align:center;">
+0.0000000
+</td>
+<td style="text-align:center;">
+5
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+Latitude
+</td>
+<td style="text-align:center;">
+numeric
+</td>
+<td style="text-align:center;">
+0.0000000
+</td>
+<td style="text-align:center;">
+878
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+Longitude
+</td>
+<td style="text-align:center;">
+numeric
+</td>
+<td style="text-align:center;">
+0.0000000
+</td>
+<td style="text-align:center;">
+885
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+locationType
+</td>
+<td style="text-align:center;">
+factor
+</td>
+<td style="text-align:center;">
+0.0490196
+</td>
+<td style="text-align:center;">
+6
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+R1new
+</td>
+<td style="text-align:center;">
+character
+</td>
+<td style="text-align:center;">
+0.0000000
+</td>
+<td style="text-align:center;">
+415
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+R2new
+</td>
+<td style="text-align:center;">
+character
+</td>
+<td style="text-align:center;">
+0.0468410
+</td>
+<td style="text-align:center;">
+321
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+numR1new
+</td>
+<td style="text-align:center;">
+integer
+</td>
+<td style="text-align:center;">
+0.0947712
+</td>
+<td style="text-align:center;">
+7
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+numR2new
+</td>
+<td style="text-align:center;">
+integer
+</td>
+<td style="text-align:center;">
+0.1285403
+</td>
+<td style="text-align:center;">
+9
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+postal
+</td>
+<td style="text-align:center;">
+character
+</td>
+<td style="text-align:center;">
+0.0021786
+</td>
+<td style="text-align:center;">
+764
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+neighborhood
+</td>
+<td style="text-align:center;">
+character
+</td>
+<td style="text-align:center;">
+0.0021786
+</td>
+<td style="text-align:center;">
+39
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="poisson-model" class="section level2">
+<h2><span class="header-section-number">5.2</span> Poisson model</h2>
+<pre class="sourceCode r"><code class="sourceCode r">collision_poisson1 &lt;-<span class="st"> </span><span class="kw">glm</span>(countYear<span class="op">~</span>year<span class="op">+</span>
+<span class="st">                            </span>Latitude<span class="op">+</span>Longitude<span class="op">+</span>
+<span class="st">                            </span>locationType<span class="op">+</span>
+<span class="st">                            </span>numR1new<span class="op">+</span>numR2new,
+                          <span class="dt">data=</span>collision_location_year, 
+                          <span class="dt">family =</span> <span class="kw">poisson</span>())
+summary_collision_poisson1 &lt;-<span class="st"> </span><span class="kw">summary</span>(collision_poisson1)
+summary_collision_poisson1</code></pre>
+<pre><code>## 
+## Call:
+## glm(formula = countYear ~ year + Latitude + Longitude + locationType + 
+##     numR1new + numR2new, family = poisson(), data = collision_location_year)
+## 
+## Deviance Residuals: 
+##     Min       1Q   Median       3Q      Max  
+## -1.0319  -0.6085  -0.5250  -0.4184   4.3515  
+## 
+## Coefficients:
+##                               Estimate Std. Error z value Pr(&gt;|z|)    
+## (Intercept)                  13.362992  74.528521   0.179   0.8577    
+## year                         -0.029438   0.007419  -3.968 7.26e-05 ***
+## Latitude                      2.142940   1.026496   2.088   0.0368 *  
+## Longitude                     0.600908   0.679692   0.884   0.3766    
+## locationTypenon-intersection -0.536710   0.082655  -6.493 8.39e-11 ***
+## locationTypeother            -0.623581   0.290411  -2.147   0.0318 *  
+## locationTypeparking          -0.037316   0.238153  -0.157   0.8755    
+## locationTypeprivate-drive    -0.705565   0.084339  -8.366  &lt; 2e-16 ***
+## numR1new                      0.146961   0.034712   4.234 2.30e-05 ***
+## numR2new                      0.165980   0.026149   6.347 2.19e-10 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## (Dispersion parameter for poisson family taken to be 1)
+## 
+##     Null deviance: 6021.5  on 9599  degrees of freedom
+## Residual deviance: 5812.8  on 9590  degrees of freedom
+##   (1416 observations deleted due to missingness)
+## AIC: 8710.7
+## 
+## Number of Fisher Scoring iterations: 6</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co">#exp(-0.029438)-1</span>
+<span class="co">#c(exp(-0.029438-1.96*0.007419)-1, exp(-0.029438+1.96*0.007419)-1) #95%</span>
+<span class="co">#exp(2.142940)-1</span>
+<span class="co">#c(exp(2.142940-1.96*1.026496)-1, exp(2.142940+1.96*1.026496)-1) #95%</span></code></pre>
+<p>From the summary of the Poisson model,
+we conclude that</p>
+<ol style="list-style-type: decimal">
+<li>Year has a significant negative effect on the mean number of collision.
+When we increase year by one and keep the other variables unchanged,
+the mean number of year collisions will decrease by 2.9% (95% C.I. = 1.5% to 4.3%)
+because <span class="math inline">\(e^{-0.029438}-1=-0.0290\)</span>.</li>
+<li>Latitude has a significant positive effect on the mean number of collision.
+When we increase latitute by 0.01 unit (1.1132 km)
+and keep the other variables unchanged,
+the mean number of year collisions will increase by 2.17% (95% C.I. = 0.13% to 4.24%)
+because <span class="math inline">\(e^{2.142940\times0.01}-1=7.524463\)</span>.</li>
+<li>Both the number of lanes for Road 1 and Road 2 have a significant positive
+effect on the mean number of collision.</li>
+<li>Compared to intersections, all other locations types reduced the mean number of collisions.
+To see whether the reductions are significant, we will need to do multiple comparisons.
+To avoid inflated false postives, it requires using a Turkey’s procedure to
+do pariwise comparisions of the location types.
+We will dicuss their effects shortly.</li>
+</ol>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">summary</span>(<span class="kw">glht</span>(collision_poisson1, <span class="kw">mcp</span>(<span class="dt">locationType=</span><span class="st">&quot;Tukey&quot;</span>)))</code></pre>
+<pre><code>## 
+##   Simultaneous Tests for General Linear Hypotheses
+## 
+## Multiple Comparisons of Means: Tukey Contrasts
+## 
+## 
+## Fit: glm(formula = countYear ~ year + Latitude + Longitude + locationType + 
+##     numR1new + numR2new, family = poisson(), data = collision_location_year)
+## 
+## Linear Hypotheses:
+##                                       Estimate Std. Error z value Pr(&gt;|z|)
+## non-intersection - intersection == 0  -0.53671    0.08265  -6.493   &lt;0.001
+## other - intersection == 0             -0.62358    0.29041  -2.147   0.1690
+## parking - intersection == 0           -0.03732    0.23815  -0.157   0.9998
+## private-drive - intersection == 0     -0.70557    0.08434  -8.366   &lt;0.001
+## other - non-intersection == 0         -0.08687    0.29909  -0.290   0.9981
+## parking - non-intersection == 0        0.49939    0.24862   2.009   0.2245
+## private-drive - non-intersection == 0 -0.16885    0.11029  -1.531   0.4953
+## parking - other == 0                   0.58627    0.37323   1.571   0.4693
+## private-drive - other == 0            -0.08198    0.29978  -0.273   0.9985
+## private-drive - parking == 0          -0.66825    0.24813  -2.693   0.0437
+##                                          
+## non-intersection - intersection == 0  ***
+## other - intersection == 0                
+## parking - intersection == 0              
+## private-drive - intersection == 0     ***
+## other - non-intersection == 0            
+## parking - non-intersection == 0          
+## private-drive - non-intersection == 0    
+## parking - other == 0                     
+## private-drive - other == 0               
+## private-drive - parking == 0          *  
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## (Adjusted p values reported -- single-step method)</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># exp(-0.53671)-1</span>
+<span class="co"># c(exp(-0.53671-1.96*0.08265)-1, exp(-0.53671+1.96*0.08265)-1) #95%</span>
+<span class="co"># </span>
+<span class="co"># exp(-0.70557)-1</span>
+<span class="co"># c(exp(-0.70557-1.96*0.08434)-1, exp(-0.70557+1.96*0.08434)-1) #95%</span>
+<span class="co"># </span>
+<span class="co"># exp(-0.66825)-1</span>
+<span class="co"># c(exp(-0.66825-1.96*0.24813)-1, exp(-0.66825+1.96*0.24813)-1) #95%</span></code></pre>
+<p>Interpretation of the comparison for different location types:</p>
+<ol style="list-style-type: decimal">
+<li>Only three pairs of comparisons has significant differences (<span class="math inline">\(\alpha=0.05\)</span>).</li>
+<li>non-intersection - intersection:
+When the location type changes from intersection to non-intersection
+and keep the other variables unchanged,
+the mean number of year collisions will decrease by 41.5% (95% C.I. = 31.3% to 50.3%)
+because <span class="math inline">\(e^{-0.53671}-1=-0.4153313\)</span>.</li>
+<li>private-drive - intersection:
+When the location type changes from intersection to private-drive
+and keep the other variables unchanged,
+the mean number of year collisions will decrease by 50.6% (95% C.I. = 41.7% to 58.1%)
+because <span class="math inline">\(e^{-0.70557}-1=-0.506173\)</span>.</li>
+<li>private-drive - parking:
+When the location type changes from parking to private-drive
+and keep the other variables unchanged,
+the mean number of year collisions will decrease by 48.7% (95% C.I. = 16.6% to 68.5%)
+because <span class="math inline">\(e^{-0.66825}-1=-0.4873951\)</span>.</li>
+</ol>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="location-effect.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="model-for-injury-level-of-collision.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": null,
+"history": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection",
+"scroll_highlight": true
+},
+"toolbar": {
+"position": "fixed"
+},
+"search": false
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
